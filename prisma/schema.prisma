@@ -1,0 +1,139 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider     = "postgresql"
+  url          = env("DATABASE_URL")
+}
+
+enum UserRole {
+  ADMIN
+  USER
+}
+
+model Account {
+  id                String   @id @default(cuid())
+  userId            String
+  type              String
+  provider          String
+  providerAccountId String
+  refresh_token     String?  @db.Text
+  access_token      String?  @db.Text
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String?  @db.Text
+  session_state     String?
+  createdAt         DateTime @default(now()) @map(name: "created_at")
+  updatedAt         DateTime @default(now()) @map(name: "updated_at")
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+  @@index([userId])
+  @@map(name: "accounts")
+}
+
+model Session {
+  id           String   @id @default(cuid())
+  sessionToken String   @unique
+  userId       String
+  expires      DateTime
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@map(name: "sessions")
+}
+
+model User {
+  id            String    @id @default(cuid())
+  name          String?
+  email         String?   @unique
+  emailVerified DateTime?
+  image         String?
+  createdAt     DateTime  @default(now()) @map(name: "created_at")
+  updatedAt     DateTime  @default(now()) @map(name: "updated_at")
+  role          UserRole  @default(USER)
+  credits       Int       @default(0)
+  accounts Account[]
+  sessions Session[]
+  studios Studio[]
+  transactions CreditTransaction[] // 关联到 CreditTransaction 模型
+  stripeTransactions StripeTransaction[]
+
+  @@map(name: "users")
+}
+
+model VerificationToken {
+  identifier String
+  token      String   @unique
+  expires    DateTime
+
+  @@unique([identifier, token])
+  @@map(name: "verification_tokens")
+}
+
+// Add this model at the end of the file
+model Studio {
+  id          String       @id @default(cuid())
+  name        String
+  type        String
+  images      String[]
+  userId      String
+  user        User         @relation(fields: [userId], references: [id])
+  createdAt   DateTime     @default(now())
+  updatedAt   DateTime     @updatedAt
+  predictions Prediction[] @relation("StudioPredictions")
+
+  @@map(name: "studios")
+}
+
+model Prediction {
+  id       String  @id @default(cuid())
+  pId       String?
+  studioId  String
+  studio   Studio  @relation("StudioPredictions", fields: [studioId], references: [id], onDelete: Cascade)
+  status    String   @default("pending") // "pending", "processing", "completed", "failed"
+  style     String?
+  imageUrl  String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map(name: "predictions")
+}
+
+// 新增 CreditTransaction 模型
+model CreditTransaction {
+  id        String   @id @default(cuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id])
+  amount    Int
+  type      TransactionType
+  createdAt DateTime @default(now())
+}
+
+enum TransactionType {
+  PURCHASE
+  USAGE
+  REFUND
+}
+
+// 添加以下模型到文件末尾
+
+model StripeTransaction {
+  id                    String   @id @default(cuid())
+  userId                String
+  user                  User     @relation(fields: [userId], references: [id])
+  stripeSessionId       String   @unique
+  stripePaymentIntentId String?
+  amount                Int
+  status                String
+  createdAt             DateTime @default(now())
+  updatedAt             DateTime @updatedAt
+
+  @@map(name: "stripe_transactions")
+}
