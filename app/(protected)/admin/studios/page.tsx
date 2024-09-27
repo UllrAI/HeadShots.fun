@@ -23,16 +23,6 @@ function TruncateText({ text, maxLength = 15 }: { text: string; maxLength?: numb
   );
 }
 
-function ImageGallery({ images }: { images: string[] }) {
-  return (
-    <div className="flex flex-wrap gap-2">
-      {images.map((image, index) => (
-        <img key={index} src={image} alt={`Studio image ${index + 1}`} width={50} height={50} className="rounded object-cover" />
-      ))}
-    </div>
-  );
-}
-
 function PredictionsDialog({ studioId, studioName }: { studioId: string, studioName: string }) {
   const [predictions, setPredictions] = useState<any[]>([]);
 
@@ -60,7 +50,6 @@ function PredictionsDialog({ studioId, studioName }: { studioId: string, studioN
                 <th className="px-4 py-2">ID</th>
                 <th className="px-4 py-2">Status</th>
                 <th className="px-4 py-2">Style</th>
-                <th className="px-4 py-2">Image</th>
                 <th className="px-4 py-2">Created At</th>
               </tr>
             </thead>
@@ -70,13 +59,6 @@ function PredictionsDialog({ studioId, studioName }: { studioId: string, studioN
                   <td className="px-4 py-2"><TruncateText text={prediction.id} /></td>
                   <td className="px-4 py-2">{prediction.status}</td>
                   <td className="px-4 py-2">{prediction.style || 'N/A'}</td>
-                  <td className="px-4 py-2">
-                    {prediction.imageUrl ? (
-                      <img src={prediction.imageUrl} alt="Prediction result" width={50} height={50} className="rounded object-cover" />
-                    ) : (
-                      'N/A'
-                    )}
-                  </td>
                   <td className="px-4 py-2">{format(new Date(prediction.createdAt), 'yyyy-MM-dd HH:mm:ss')}</td>
                 </tr>
               ))}
@@ -117,7 +99,6 @@ export default function StudiosPage() {
               <th className="px-6 py-3">Name</th>
               <th className="px-6 py-3">Type</th>
               <th className="px-6 py-3">User</th>
-              <th className="px-6 py-3">Images</th>
               <th className="px-6 py-3">Predictions</th>
               <th className="px-6 py-3">Created At</th>
             </tr>
@@ -131,9 +112,6 @@ export default function StudiosPage() {
                 <td className="px-6 py-4">{studio.type}</td>
                 <td className="px-6 py-4">
                   <TruncateText text={studio.user.name || studio.user.email} />
-                </td>
-                <td className="px-6 py-4">
-                  <ImageGallery images={studio.images} />
                 </td>
                 <td className="px-6 py-4">
                   <PredictionsDialog studioId={studio.id} studioName={studio.name} />

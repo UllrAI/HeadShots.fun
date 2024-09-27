@@ -133,30 +133,9 @@ export default function UsersList() {
                       </DialogHeader>
                       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
                         {user.studios.map((studio) => (
-                          <Card key={studio.id} className="overflow-hidden">
-                            <CardHeader className="p-4">
-                              <CardTitle className="text-lg">{studio.name}
-                                <span className="text-xs text-muted-foreground"> : {studio.images.length} sample images</span>
-                              </CardTitle>
-                            </CardHeader>
-                            <CardContent className="p-0">
-                              <div className="grid grid-cols-2 gap-1">
-                                {studio.images.map((image, index) => (
-                                  <img
-                                    key={index}
-                                    src={image}
-                                    alt={`${studio.name} image ${index + 1}`}
-                                    className="h-24 w-full object-cover"
-                                  />
-                                ))}
-                              </div>
-                              {studio.images.length > 4 && (
-                                <div className="p-2 text-center text-sm text-muted-foreground">
-                                  +{studio.images.length - 4} more images
-                                </div>
-                              )}
-                            </CardContent>
-                          </Card>
+                          <Badge variant="outline" className="text-lg">{studio.name}
+                            <span className="text-xs text-muted-foreground"> : {studio.images.length} sample images</span>
+                          </Badge>
                         ))}
                       </div>
                     </DialogContent>

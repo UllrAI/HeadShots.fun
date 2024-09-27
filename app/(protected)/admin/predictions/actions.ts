@@ -51,8 +51,3 @@ export async function deletePrediction(id: string) {
     return { success: false, error: 'Failed to delete prediction' };
   }
 }
-
-// 保留getStudios函数，以防其他地方还在使用
-export async function getStudios(page: number = 1, pageSize: number = 10) {
-  // ... 保持不变 ...
-}

@@ -60,7 +60,6 @@ export default function PredictionsPage() {
               <th className="px-6 py-3">pID</th>
               <th className="px-6 py-3">Status</th>
               <th className="px-6 py-3">Style</th>
-              <th className="px-6 py-3">Image</th>
               <th className="px-6 py-3">Studio</th>
               <th className="hidden px-6 py-3">User</th>
               <th className="px-6 py-3">Created At</th>
@@ -78,13 +77,6 @@ export default function PredictionsPage() {
                   </Badge>
                 </td>
                 <td className="px-6 py-4">{prediction.style || 'N/A'}</td>
-                <td className="px-6 py-4">
-                  {prediction.imageUrl ? (
-                    <img src={prediction.imageUrl} alt="Prediction result" width={50} height={50} className="rounded object-cover" />
-                  ) : (
-                    'N/A'
-                  )}
-                </td>
                 <td className="px-6 py-4"><TruncateText text={prediction.studio?.name || 'N/A'} /></td>
                 <td className="hidden px-6 py-4"><TruncateText text={prediction.userEmail} /></td>
                 <td className="px-6 py-4">{format(new Date(prediction.createdAt), 'yyyy-MM-dd HH:mm:ss')}</td>
