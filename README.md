@@ -64,10 +64,12 @@ This project is built upon [next-saas-stripe-starter](https://github.com/mickasm
 - [Cloudflare R2](https://developers.cloudflare.com/r2/?from=headshots.fun) – Object storage
 - [PixMiller](https://pixmiller.com/?from=headshots.fun) – Image preprocessing, remove image background
 
-## Open Source Release
+## Open Source
 
 We're thrilled to announce that HeadShots.fun is now open source! 
-This release empowers developers to contribute, customize, and extend the platform. 
+By complying with the license, developers are empowered to contribute, customize, and extend the platform.
+
+If you need business support, such as deployment/custom development or technical consulting services, please feel free to contact us at headshots-fun@ullrai.com .
 
 ## Get Involved
 - 🌟 Star this repo to show your support
@@ -77,9 +79,10 @@ This release empowers developers to contribute, customize, and extend the platfo
 - 🐦 Follow us on [Twitter/X](https://twitter.com/ullr_ai) for the latest news
 
 ## License
-This project is released under the [AGPL 3.0](./LICENSE.md). 
-If the main contributors agree, we may switch to a more permissive license in future versions. 
 Please ensure that the Powered link remains in the footer.
+And Then this project is now released under the [AGPL 3.0](./LICENSE.md). 
+
+> If the main contributors agree, we may switch to a more permissive license in future versions. 
 
 ---
 [HeadShots.fun](https://headshots.fun/?from=GitHub) - Fun & Pro for Every Occasion, Just Shoot!

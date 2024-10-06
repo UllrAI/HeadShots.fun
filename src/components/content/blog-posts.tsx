@@ -1,6 +1,6 @@
-import { Post } from "@/.contentlayer/generated";
+import { Post } from "contentlayer/generated";
 
-import { BlogCard } from "./blog-card";
+import { BlogCard } from "@/components/content/blog-card";
 
 export function BlogPosts({
   posts,

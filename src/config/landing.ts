@@ -1,4 +1,4 @@
-import { FeatureLdg, InfoLdg, TestimonialType } from "types";
+import { FeatureLdg, InfoLdg, TestimonialType } from "@/types";
 
 export const infos: InfoLdg[] = [
   {
