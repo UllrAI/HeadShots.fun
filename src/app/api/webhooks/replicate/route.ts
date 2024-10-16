@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
 import { prisma } from "@/lib/db";
+import { uploadToR2 } from "@/actions/upload-to-r2";
 
 export async function POST(request: Request) {
     try {
@@ -18,12 +19,14 @@ export async function POST(request: Request) {
         }
 
         const imageUrl = output[0];
+        const fileName = `${Date.now()}-${Math.random().toString(36).substring(2, 15)}.png`;
+        const newImageUrl = await uploadToR2(imageUrl, fileName);
 
         await prisma.prediction.update({
             where: { id: predictionId },
             data: {
                 status: "completed",
-                imageUrl: imageUrl,
+                imageUrl: newImageUrl,
             },
         });
 

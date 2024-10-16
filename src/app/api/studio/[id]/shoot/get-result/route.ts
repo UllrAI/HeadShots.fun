@@ -2,6 +2,7 @@ import { auth } from "@/auth";
 import { prisma } from "@/lib/db";
 import { replicate } from "@/lib/replicate";
 import { NextResponse } from 'next/server';
+import { uploadToR2 } from "@/actions/upload-to-r2";
 
 export async function POST(request: Request, { params }: { params: { id: string } }) {
     try {
@@ -10,7 +11,7 @@ export async function POST(request: Request, { params }: { params: { id: string 
             return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
         }
 
-        const { predictionDbId, pId } = await request.json(); // 添加 pId
+        const { predictionDbId, pId } = await request.json();
         const studioId = params.id;
         
         const studio = await prisma.studio.findUnique({
@@ -21,17 +22,28 @@ export async function POST(request: Request, { params }: { params: { id: string 
           return NextResponse.json({ error: "Studio not found" }, { status: 404 });
         }
 
-        // 请求 predictions 结果
+        // Request predictions results
         const output = await replicate.predictions.get(pId as string); 
         
-        // 检查 output.status 和 output.output
         if (output.status === "succeeded" && output.output && output.output.length > 0) {
+            const originalImageUrl = output.output[0];
+            const fileName = `${Date.now()}-${Math.random().toString(36).substring(2, 15)}.png`;
+            const newImageUrl = await uploadToR2(originalImageUrl, fileName);
+
             await prisma.prediction.update({
                 where: { id: predictionDbId }, 
                 data: { 
-                    imageUrl: output.output[0],
+                    imageUrl: newImageUrl,
                     status: "completed"
                 },
+            });
+
+            return NextResponse.json({ 
+                success: true, 
+                predictionId: predictionDbId, 
+                pId: pId,
+                imageUrl: newImageUrl,
+                status: output.status
             });
         } else if (output.status === "failed") {
             console.log("Prediction failed");
@@ -42,7 +54,7 @@ export async function POST(request: Request, { params }: { params: { id: string 
                 },
             });
         } else {
-            // 处理中的状态
+            // Processing status
             console.log("Prediction is still processing");
             await prisma.prediction.update({
                 where: { id: predictionDbId }, 
@@ -58,7 +70,7 @@ export async function POST(request: Request, { params }: { params: { id: string 
             });
         }
         
-        // 返回更新后的预测信息
+        // Returns updated forecast information
         return NextResponse.json({ 
             success: true, 
             predictionId: predictionDbId, 
@@ -71,4 +83,3 @@ export async function POST(request: Request, { params }: { params: { id: string 
         return NextResponse.json({ error: "Internal server error" }, { status: 500 });
     }
 }
-
