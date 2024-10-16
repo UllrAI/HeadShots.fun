@@ -73,8 +73,9 @@ export async function POST(request: Request, { params }: { params: { id: string 
         });
 
         try {
+            //Using the new version of https://replicate.com/visoar/headshots.fun
             const output = await replicate.predictions.create({
-                version: "43d309c37ab4e62361e5e29b8e9e867fb2dcbcec77ae91206a8d95ac5dd451a0",
+                version: "5826f6bb95918f0c468b12eb0ea982aab7f0a8e08cd8365bff0a7f951da20661",
                 input: input,
                 webhook: `${webhookUrl}?predictionId=${prediction.id}`,
                 webhook_events_filter: ["completed"]
