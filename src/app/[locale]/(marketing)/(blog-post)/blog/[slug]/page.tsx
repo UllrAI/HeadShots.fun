@@ -22,6 +22,8 @@ import Author from "@/components/content/author";
 import BlurImage from "@/components/shared/blur-image";
 import MaxWidthWrapper from "@/components/shared/max-width-wrapper";
 import { DashboardTableOfContents } from "@/components/shared/toc";
+import { getTranslations } from 'next-intl/server';
+import { unstable_setRequestLocale } from 'next-intl/server';
 
 export async function generateStaticParams() {
   return allPosts.map((post) => ({
@@ -32,7 +34,7 @@ export async function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: {
-  params: { slug: string };
+  params: { slug: string; locale: string };
 }): Promise<Metadata | undefined> {
   const post = allPosts.find((post) => post.slugAsParams === params.slug);
   if (!post) {
@@ -42,8 +44,8 @@ export async function generateMetadata({
   const { title, description, image } = post;
 
   return constructMetadata({
-    title: `${title} – ${siteConfig.title}`,
-    description: description,
+    title: `Blog | ${title} – ${siteConfig.title}`,
+    description,
     image,
   });
 }
@@ -53,8 +55,11 @@ export default async function PostPage({
 }: {
   params: {
     slug: string;
+    locale: string;
   };
 }) {
+  unstable_setRequestLocale(params.locale);
+  const t = await getTranslations('BlogPage');
   const post = allPosts.find((post) => post.slugAsParams === params.slug);
 
   if (!post) {
@@ -100,13 +105,13 @@ export default async function PostPage({
                 "h-8",
               )}
             >
-              {category.title}
+              {t(category.title)}
             </Link>
             <time
               dateTime={post.date}
               className="text-sm font-medium text-muted-foreground"
             >
-              {formatDate(post.date)}
+              {formatDate(post.date, params.locale)}
             </time>
           </div>
           <h1 className="font-heading text-3xl text-foreground sm:text-4xl">
@@ -154,7 +159,7 @@ export default async function PostPage({
         {relatedArticles.length > 0 && (
           <div className="flex flex-col space-y-4 pb-16">
             <p className="font-heading text-2xl text-foreground">
-              More Articles
+              {t('more_articles')}
             </p>
 
             <div className="grid grid-cols-1 gap-3 md:grid-cols-2 lg:gap-6">
@@ -171,7 +176,7 @@ export default async function PostPage({
                     {post.description}
                   </p>
                   <p className="text-sm text-muted-foreground">
-                    {formatDate(post.date)}
+                    {formatDate(post.date, params.locale)}
                   </p>
                 </Link>
               ))}

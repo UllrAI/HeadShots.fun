@@ -28,7 +28,7 @@ export const siteConfig: SiteConfig = {
     }
   },
   keywords: [
-      "Headshots",
+      "Headshots"
   ],
   authors: [
     {
@@ -54,15 +54,15 @@ export const footerLinks: SidebarNavItem[] = [
     title: "Ullr AI Products",
     items: [
       { title: "PixMiller", href: "https://pixmiller.com" },
-      { title: "HeadShots.fun", href: "https://headshots.fun" },
+      { title: "HeadShots fun", href: "https://headshots.fun" },
       { title: "Ullr AI Lab", href: "https://ullrai.com" },
     ],
   },
   {
     title: "Resources",
     items: [
-      { title: "Styles", href: "/generator-styles" },
       { title: "Pricing", href: "/pricing" },
+      { title: "Styles", href: "/generator-styles" },
       { title: "Blog", href: "/blog" },
     ],
   },

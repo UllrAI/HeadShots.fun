@@ -1,4 +1,23 @@
-import { FeatureLdg, InfoLdg, TestimonialType } from "@/types";
+interface InfoLdg {
+  title: string;
+  description: string;
+  image: string;
+  list: Array<{ title: string; description: string; icon: string }>;
+}
+
+interface FeatureLdg {
+  title: string;
+  description: string;
+  link: string;
+  icon: string;
+}
+
+interface TestimonialType {
+  name: string;
+  job: string;
+  image: string;
+  review: string;
+}
 
 export const infos: InfoLdg[] = [
   {

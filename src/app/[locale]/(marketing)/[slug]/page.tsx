@@ -8,6 +8,7 @@ import "@/styles/mdx.css";
 import { Metadata } from "next";
 
 import { constructMetadata, getBlurDataURL } from "@/lib/utils";
+import { unstable_setRequestLocale } from 'next-intl/server';
 
 export async function generateStaticParams() {
   return allPages.map((page) => ({
@@ -38,8 +39,11 @@ export default async function PagePage({
 }: {
   params: {
     slug: string;
+    locale: string;
   };
 }) {
+  unstable_setRequestLocale(params.locale);
+
   const page = allPages.find((page) => page.slugAsParams === params.slug);
 
   if (!page) {

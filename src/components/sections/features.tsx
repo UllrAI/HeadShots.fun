@@ -1,29 +1,32 @@
 import Link from "next/link";
 
-import { features } from "@/config/landing";
 import { Button } from "@/components/ui/button";
 import { HeaderSection } from "@/components/shared/header-section";
 import { Icons } from "@/components/shared/icons";
 import MaxWidthWrapper from "@/components/shared/max-width-wrapper";
+import { useTranslations } from "next-intl";
 
+const featuresIcons = ["sliders", "zap", "share2", "shield",  "cpu", "smile"];
 export default function Features() {
+  const t = useTranslations("Features");
   return (
     <section>
       <div className="pb-6 pt-28">
         <MaxWidthWrapper>
           <HeaderSection
             label="Features"
-            title="Explore Our Features"
-            subtitle="Unleash your creativity with AI-powered tools designed to make every headshot uniquely yours."
+            title={t("title")}
+            subtitle={t("subtitle")}
           />
 
           <div className="mt-12 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-            {features.map((feature) => {
-              const Icon = Icons[feature.icon || "nextjs"];
+            {featuresIcons.map((icon, index) => {
+              const Icon = Icons[icon || "nextjs"];
+              const featureNumber = (index + 1).toString();
               return (
                 <div
                   className="group relative overflow-hidden rounded-2xl border bg-background p-5 md:p-8"
-                  key={feature.title}
+                  key={t(`features.${featureNumber}.title`)}
                 >
                   <div
                     aria-hidden="true"
@@ -33,24 +36,12 @@ export default function Features() {
                     <div className="relative flex size-12 rounded-2xl border border-border shadow-sm *:relative *:m-auto *:size-6">
                       <Icon />
                     </div>
-
-                    <p className="mt-6 pb-6 text-muted-foreground">
-                      {feature.description}
+                    <h3 className="mt-4 font-semibold">
+                      {t(`features.${featureNumber}.title`)}
+                    </h3>
+                    <p className="mt-2 text-muted-foreground">
+                      {t(`features.${featureNumber}.description`)}
                     </p>
-
-                    {/* <div className="-mb-5 flex gap-3 border-t border-muted py-4 md:-mb-7">
-                      <Button
-                        variant="secondary"
-                        size="sm"
-                        rounded="xl"
-                        className="px-4"
-                      >
-                        <Link href="/" className="flex items-center gap-2">
-                          <span>Visit the site</span>
-                          <Icons.arrowUpRight className="size-4" />
-                        </Link>
-                      </Button>
-                    </div> */}
                   </div>
                 </div>
               );

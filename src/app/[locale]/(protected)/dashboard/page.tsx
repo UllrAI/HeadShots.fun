@@ -12,6 +12,7 @@ import { Badge } from "@/components/ui/badge";
 import { Icons } from "@/components/shared/icons";
 import { useRouter } from 'next/navigation';
 import { Loader2 } from "lucide-react";
+import { useTranslations } from 'next-intl';
 
 interface Studio {
   id: string;
@@ -37,6 +38,7 @@ export default function DashboardPage() {
   const [studios, setStudios] = useState<Studio[]>([]);
   const [loading, setLoading] = useState(true);
   const router = useRouter();
+  const t = useTranslations('StudioPage');
 
   const fetchStudios = async () => {
     setLoading(true);
@@ -46,7 +48,11 @@ export default function DashboardPage() {
         throw new Error('Failed to fetch studios');
       }
       const data = await response.json();
-      setStudios(data);
+      // Sort studios by createdAt in descending order
+      const sortedStudios = data.sort((a: Studio, b: Studio) => 
+        new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
+      );
+      setStudios(sortedStudios);
     } catch (error) {
       console.error("Error fetching studios:", error);
     } finally {
@@ -65,13 +71,13 @@ export default function DashboardPage() {
   return (
     <div className="container mx-auto">
       <DashboardHeader
-        heading="Studios"
+        heading={t('studios')}
       >
         <Link href="/dashboard/studio/create">
           <Button>
             <Icons.add className="mr-2 size-4" />
-            
-            Create<span className="hidden sm:inline-flex">&nbsp;New Studio</span>
+            <span className="hidden sm:inline-flex">{t('create_new_studio')}</span>
+            <span className="inline-flex sm:hidden">{t('create_new_studio_short')}</span>
           </Button>
         </Link>
       </DashboardHeader>
@@ -83,17 +89,17 @@ export default function DashboardPage() {
       ) : studios.length > 0 ? (
         <Card className="mt-6">
           <CardHeader>
-            <CardTitle>Your Studios</CardTitle>
-            <CardDescription>A list of all your created studios.</CardDescription>
+            <CardTitle>{t('your_studios')}</CardTitle>
+            <CardDescription>{t('a_list_of_all_your_created_studios')}</CardDescription>
           </CardHeader>
           <CardContent>
             <Table>
               <TableHeader>
                 <TableRow>
-                  <TableHead>Name</TableHead>
-                  <TableHead className="hidden md:table-cell">Type</TableHead>
-                  <TableHead>HeadShots</TableHead>
-                  <TableHead className="hidden md:table-cell">Created At</TableHead>
+                  <TableHead>{t('name')}</TableHead>
+                  <TableHead className="hidden md:table-cell">{t('type')}</TableHead>
+                  <TableHead>{t('headshots')}</TableHead>
+                  <TableHead className="hidden md:table-cell">{t('created_at')}</TableHead>
                 </TableRow>
               </TableHeader>
               <TableBody>
@@ -103,7 +109,7 @@ export default function DashboardPage() {
                       className="cursor-pointer transition-colors hover:bg-muted/50"
                       onClick={() => handleRowClick(studio.id)}
                     >
-                      <TableCell>
+                      <TableCell className="font-medium">
                         {studio.name}
                       </TableCell>
                       <TableCell className="hidden md:table-cell">
@@ -130,12 +136,12 @@ export default function DashboardPage() {
       ) : (
         <EmptyPlaceholder className="mt-6 min-h-[80vh]">
           <EmptyPlaceholder.Icon name="dashboard" />
-          <EmptyPlaceholder.Title>No Studios created</EmptyPlaceholder.Title>
+          <EmptyPlaceholder.Title>{t('no_studios_created')}</EmptyPlaceholder.Title>
           <EmptyPlaceholder.Description>
-            You don&apos;t have any Studios yet. Start creating Studios.
+            {t('you_dont_have_any_studios_yet')}
           </EmptyPlaceholder.Description>
           <Link href="/dashboard/studio/create">
-            <Button>Create Studio</Button>
+            <Button>{t('create_new_studio')}</Button>
           </Link>
         </EmptyPlaceholder>
       )}

@@ -12,7 +12,7 @@ import { cn } from "@/lib/utils";
 import { Icons } from "@/components/shared/icons";
 
 import { ModeToggle } from "./mode-toggle";
-
+import LocaleSwitcher from "@/components/locale/locale-switcher";
 export function NavMobile() {
   const { data: session } = useSession();
   const [open, setOpen] = useState(false);
@@ -113,6 +113,7 @@ export function NavMobile() {
         </ul>
 
         <div className="mt-5 flex items-center justify-end space-x-4">
+          <LocaleSwitcher />
           <Link href={siteConfig.links.github} target="_blank" rel="noreferrer">
             <Icons.github className="size-6" />
             <span className="sr-only">GitHub</span>

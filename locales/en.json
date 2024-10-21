@@ -1,0 +1,423 @@
+{
+  "auth": {
+    "sign_in": "Sign In",
+    "login": "Login",
+    "register": "Register",
+    "email_login_text": "You can use your email to",
+    "sign_in_with_google": "Sign In with Google",
+    "sign_in_with_linkedin": "Sign In with LinkedIn",
+    "back": "Back",
+    "welcome_back": "Welcome back",
+    "use_email_to_sign_in": "Use email to sign in to your HeadShots.fun account",
+    "don't_have_an_account": "Don't have an account?",
+    "sign_up": "Sign Up",
+    "email": "Email",
+    "sign_up_with_email": "Sign Up with Email",
+    "sign_in_with_email": "Sign In with Email",
+    "or": "Or",
+    "continue_with_google": "Continue with Google",
+    "continue_with_linkedin": "Continue with LinkedIn",
+    "create_an_account": "Create an account",
+    "enter_your_email_below_to_create_your_account": "Enter your email below to create your account",
+    "by_clicking_continue_you_agree_to_our": "By clicking continue, you agree to our",
+    "terms_of_service": "Terms of Service",
+    "privacy_policy": "Privacy Policy"
+  },
+  "dashboard": {
+    "menu": "MENU",
+    "options": "OPTIONS",
+    "admin": "ADMIN",
+    "dashboard": "Dashboard",
+    "billing": "Billing",
+    "settings": "Settings",
+    "homepage": "Homepage",
+    "mail_support": "Mail Support",
+    "admin_panel": "Admin Panel",
+    "users": "Users",
+    "studios": "Studios",
+    "predictions": "Predictions",
+    "orders": "Orders",
+    "log_out": "Log out"
+  },
+  "sitefooter": {
+    "sections": {
+      "Company": "Company",
+      "Ullr AI Products": "Ullr AI Products",
+      "Resources": "Resources"
+    },
+    "links": {
+      "About": "About",
+      "Terms": "Terms",
+      "Privacy": "Privacy",
+      "PixMiller": "PixMiller",
+      "HeadShots fun": "HeadShots.fun",
+      "Ullr AI Lab": "Ullr AI Lab",
+      "Pricing": "Pricing",
+      "Styles": "Styles",
+      "Blog": "Blog"
+    },
+    "copyright": "Copyright © 2024. All rights reserved.",
+    "built_by": "Built by",
+    "open_source_by": "Open source by"
+  },
+  "HeroLanding": {
+    "make-photo-successful": "Make Your Photo Successful First!",
+    "fun_pro_for_every_occasion": "Fun & Pro for Every Occasion, Just Shoot at",
+    "headshots_fun": "HeadShots.fun",
+    "get_unique_portraits": "Get unique and professional level portraits just in <bold>10 seconds</bold> using the fastest AI at HeadShots.fun. Only <bold>1/20</bold> the price of a physical photo shoot in the studio.",
+    "get_your_headshots": "Get Your HeadShots"
+  },
+  "Testimonials": {
+    "label": "Testimonials",
+    "title": "What our clients are sharing.",
+    "subtitle": "Discover the glowing feedback from our delighted customers worldwide.",
+    "reviews": {
+      "1": "HeadShots.fun has completely transformed my workflow. The AI tools are not only efficient but also fun to use, making the headshot creation process both professional and enjoyable.",
+      "2": "HeadShots.fun made it super easy to create professional headshots for all my social media campaigns. ",
+      "3": "HeadShots.fun has significantly enhanced my brand work by providing professional-quality images that perfectly align with my brand's style.",
+      "4": "Creating headshots for my startup has never been this easy and enjoyable. HeadShots.fun delivers fantastic results while keeping the process light and fun.",
+      "5": "I love how HeadShots.fun balances creativity and professionalism. The flexibility of the AI tools allows me to design headshots that are both fun and perfectly suited to my creative projects.",
+      "6": "The efficiency and quality of HeadShots.fun are outstanding. I was able to create studio-quality headshots in seconds, and the process was surprisingly enjoyable.",
+      "7": "HeadShots.fun has been a valuable tool for our marketing campaigns. The AI-generated headshots are not only professional but also have a unique, fun element that makes our profiles stand out.",
+      "8": "The quality and speed of HeadShots.fun are impressive. I was able to create a professional headshot that looks like it was done in a studio, all within seconds."
+    }
+  },
+  "InfoLanding": {
+    "title": "Empower Your Creativity",
+    "description": "Unlock the fun and potential of your headshots with HeadShots.fun. Transform simple snapshots into captivating AI-enhanced images that reflect your true self.",
+    "list": {
+      "title": {
+        "1": "Create Effortlessly",
+        "2": "Personalize with AI",
+        "3": "Elevate Your Presence"
+      },
+      "description": {
+        "1": "Enjoy a seamless and intuitive process that makes creating the perfect headshot a breeze.",
+        "2": "Use advanced AI tools to customize every aspect of your headshot, ensuring it’s uniquely you.",
+        "3": "Whether for work or play, make sure your online presence stands out with headshots that combine fun with professionalism."
+      }
+    }
+  },
+  "Features": {
+    "title": "Explore Our Features",
+    "subtitle": "Unleash your creativity with AI-powered tools designed to make every headshot uniquely yours.",
+    "features": {
+      "1": {
+        "title": "Effortless Creation",
+        "description": "Tailor your AI-generated headshots to fit your unique style. Our intuitive tools make it easy to adjust every detail."
+      },
+      "2": {
+        "title": "Personalized AI",
+        "description": "Generate stunning headshots in seconds. With the power of AI, you'll never have to wait for professional-quality images."
+      },
+      "3": {
+        "title": "Professional Quality",
+        "description": "Easily incorporate your headshots into your personal or professional profiles, with formats optimized for any platform."
+      },
+      "4": {
+        "title": "AI-Enhanced Creativity",
+        "description": "Your data is safe with us. We prioritize your privacy and ensure that your headshots are securely stored and shared."
+      },
+      "5": {
+        "title": "Fun and Engaging",
+        "description": "Leverage the power of AI to explore creative possibilities. Experiment with different styles and looks effortlessly."
+      },
+      "6": {
+        "title": "Fun and Engaging",
+        "description": "Enjoy a playful and engaging experience as you create headshots that are both fun and professional."
+      }
+    }
+  },
+  "NotFound": {
+    "pageNotFound": "Page not found.",
+    "backTo": "Back to",
+    "homepage": "homepage"
+  },
+  "StepsSection": {
+    "step": "Step",
+    "uploadYourSelfies": "Upload Your Selfies",
+    "uploadYourSelfiesDescription": "Upload 1-5 clear selfies or photos showcasing your face in various settings.",
+    "personalizeYourStyle": "Personalize Your Style",
+    "personalizeYourStyleDescription": "Select from diverse styles or create custom prompts for truly unique headshots.",
+    "instantAIMagic": "Instant AI Magic",
+    "instantAIMagicDescription": "Our advanced AI generates pro-quality headshots in seconds, ready for any use.",
+    "quickAndEasyProcess": "Quick & Easy Process",
+    "createFunAndProHeadshotsIn3SimpleSteps": "Create Fun & Pro Headshots in 3 Simple Steps",
+    "experienceTheFastestAITechnologyAtHeadShotsFunForStunningPersonalizedHeadshotsPerfectForEveryOccasion": "Experience the fastest AI technology at HeadShots.fun for stunning, personalized headshots perfect for every occasion."
+  },
+  "CTA": {
+    "title": "Make Me Look Awesome!",
+    "description": "Sick of your same old selfies? Our AI photo booth is here to spice things up! We've got you! No fancy gear needed – just a few clicks and boom! You're ready to wow the world!",
+    "button": "Get Started",
+    "cool_button": "Shoot Your Fun Headshots Now!",
+    "cool_title": "Instant Pro & Fun Headshots with AI Magic",
+    "cool_description": "Experience HeadShots.fun! Create stunning Pro & Fun portraits in seconds, no photographer needed."
+  },
+  "BentoGrid": {
+    "customizable_prompts": "Customizable Prompts",
+    "secure_by_design": "Secure by Design",
+    "secure_by_design_description": "Your data is protected with top-notch security, giving you peace of mind.",
+    "usually_in_10_seconds": "Usually in 10 seconds",
+    "lightning_fast_results": "Lightning-Fast Results",
+    "lightning_fast_results_description": "Get AI-generated headshots in 10 seconds.",
+    "professional_quality": "Professional Quality",
+    "professional_quality_description": "AI-generated headshots.fun that rival professional photography, perfect for any occasion and purpose.",
+    "effortlessly_fun": "Effortlessly Fun",
+    "effortlessly_fun_description": "Enjoy a seamless and enjoyable process, from capturing to receiving your headshots. It’s as fun as it is professional.",
+    "superhero": "Superhero",
+    "witch": "Witch",
+    "clay": "Clay"
+  },
+  "NavBar": {
+    "dashboard": "Dashboard",
+    "sign_in": "Sign In",
+    "blog": "Blog",
+    "generator-styles": "Styles",
+    "pricing": "Pricing"
+  },
+  "HeadshotStylePage": {
+    "label": "HeadShots.fun Styles",
+    "title": "Versatile Headshot Styles for Any Occasion",
+    "subtitle": "Discover our diverse collection of AI-generated headshot styles. Quick, easy, and personalized just for you!"
+  },
+  "PricingPage": {
+    "metadata": {
+      "title": "Pricing – {siteTitle}",
+      "description": "Explore our headshot pricing."
+    },
+    "label": "Pricing",
+    "title": "Simple, Transparent Pricing",
+    "subtitle": "Choose the perfect plan for your needs. No hidden fees, no surprises.",
+    "trial_section_description": "Enjoy a 7-day risk-free trial on all plans. Full refund if no credits used.",
+    "1_credit_1_headshot": "1 Credit = 1 Headshot",
+    "processing": "Processing...",
+    "purchase": "Purchase",
+    "most_popular": "Most Popular",
+    "package": "Package",
+    "price": "Price",
+    "price_per": "Price per",
+    "credits": "Credits",
+    "plans": {
+      "1": {
+        "description": "Selfie Starter: Your first step into AI glamour",
+        "features": "2 Credits"
+      },
+      "2": {
+        "description": "Casual Charmer: Spice up your social media game",
+        "features": "10 Credits"
+      },
+      "3": {
+        "description": "Snapshot Superstar: Unleash your inner model",
+        "features": "25 Credits"
+      },
+      "4": {
+        "description": "Portrait Pro: Elevate your online presence",
+        "features": "50 Credits"
+      },
+      "5": {
+        "description": "Team Transformer: Make your whole squad shine",
+        "features": "100 Credits"
+      },
+      "6": {
+        "description": "Headshot Heaven: Enjoy unlimited fun",
+        "features": "200 Credits"
+      }
+    }
+  },
+  "PricingPageFAQ": {
+    "title": "Frequently Asked Questions",
+    "label": "Pricing",
+    "subtitle": "Frequently asked questions about our pricing.",
+    "qa": [
+      [
+        "What is HeadShots.fun?",
+        "HeadShots.fun is an AI-powered platform that allows you to create unique and stunning headshots quickly and easily, personalized for every occasion."
+      ],
+      [
+        "How does the credit system work?",
+        "1 Credit = 1 Headshot. We offer various credit packages to suit different needs. You can purchase credits that can be used to generate AI headshots. The more credits you buy, the better value you get."
+      ],
+      [
+        "What's the pricing for credit packages?",
+        "Our pricing starts at $2.99, perfect for trying out our service. We also offer larger packages, with our most popular choice being $19.9 Plan Snapshot Superstar, ideal for regular users."
+      ],
+      [
+        "Are there any features to help customize my headshots?",
+        "Yes! We offer AI-powered tools designed to make every headshot uniquely yours. You can explore various features to unleash your creativity and personalize your headshots for different occasions."
+      ],
+      [
+        "How fast is the AI technology used for generating headshots?",
+        "We use the fastest AI technology available to ensure quick and efficient headshot generation, typically in 10 seconds. Our goal is to provide you with stunning results in the shortest time possible."
+      ],
+      [
+        "What kind of photos should I upload to the platform?",
+        "We recommend that you upload multiple front-facing photos to ensure that your profile picture is as accurate as possible. These photos should show a clear/unobstructed view of your face. Please make sure your photos are clear, high-quality, and do not include other people or animals."
+      ],
+      [
+        "Can I use the same photo for multiple headshots?",
+        "Yes, you can use the same photo for multiple headshots. Our AI technology allows for multiple outputs from a single photo, so you can create different looks and styles with the same image."
+      ]
+    ]
+  },
+  "BlogPage": {
+    "blog": "Blog",
+    "description": "Latest news and updates from HeadShots.fun",
+    "categories": "Categories",
+    "all": "All",
+    "news": "News",
+    "education": "Education",
+    "more_articles": "More Articles"
+  },
+  "StudioPage": {
+    "studios": "Studios",
+    "create_new_studio": "Create Studio",
+    "create_new_studio_short": "Create",
+    "your_studios": "Your Studios",
+    "a_list_of_all_your_created_studios": "A list of all your created studios.",
+    "name": "Name",
+    "type": "Type",
+    "headshots": "Headshots",
+    "created_at": "Created At",
+    "no_studios_created": "No Studios created",
+    "you_dont_have_any_studios_yet": "You don't have any Studios yet. Start creating Studios.",
+    "error_studio_type_required": "Please select a studio type.",
+    "error_studio_name_required": "Please enter a studio name.",
+    "error_at_least_one_image": "Please upload at least one image.",
+    "error_max_5_images": "You can upload a maximum of 5 images.",
+    "error_failed_to_upload_image": "Failed to upload image",
+    "success_studio_created": "Studio created successfully!",
+    "error_failed_to_create_studio": "Failed to create studio. Please try again.",
+    "back_to_dashboard": "Back to Dashboard",
+    "enter_basic_info_for_your_studio": "Enter the basic information for your studio",
+    "studio_name": "Studio Name",
+    "this_is_the_name_that_will_be_displayed_for_your_studio": "This is the name that will be displayed for your studio.",
+    "studio_type": "Studio Type",
+    "male": "Male",
+    "female": "Female",
+    "kid": "Kid",
+    "select_the_type_of_studio_you_want_to_create": "Select the type of studio you want to create.",
+    "upload_sample_photos": "Upload Sample Photos",
+    "please_upload_1_5_clear_front_facing_photos_that_meet_the_sample_photo_requirements": "Please upload 1-5 clear, front-facing photos that meet the sample photo requirements.",
+    "set_as_main": "Set as Main",
+    "main": "Main",
+    "creating": "Creating...",
+    "upload_a_file": "Upload a file",
+    "or_drag_and_drop": "or drag and drop",
+    "png_jpg_gif_up_to_10mb": "PNG, JPG, GIF up to 10MB",
+    "create_studio": "Create Studio",
+    "sample_photo_requirements": "Sample Photo Requirements",
+    "make_sure_your_sample_photos_meet_these_standards": "Make sure your sample photos meet these standards:",
+    "front_and_clear": "Front & Clear",
+    "multiple_people": "Multiple People",
+    "side_shots": "Side Shots",
+    "blurry_photos": "Blurry Photos",
+    "obstructing": "Obstructing",
+    "detailed_explanation_for": "Detailed explanation for",
+    "your_studio_name": "Your studio name",
+    "select_studio_type": "Select studio type",
+    "error_failed_to_fetch_prediction_result": "Failed to fetch prediction result.",
+    "shooting_results": "Shooting results",
+    "download": "Download",
+    "open_in_new_tab": "Open in new Tab",
+    "close": "Close",
+    "your_studio_created_successfully": "Your studio created successfully!",
+    "ready_to_shoot": "Ready to Shoot?",
+    "click_shoot_below_to_begin_creating_your_first_headshot": "Click 'Shoot' below to begin creating your first headshot.",
+    "each_shoot_generates_a_unique_headshot_even_with_the_same_style_or_prompt_try_multiple_times": "Each shoot generates a unique headshot, even with the same style or prompt. Try multiple times.",
+    "studio_updated_successfully": "Studio updated successfully!",
+    "failed_to_update_studio_please_try_again": "Failed to update studio. Please try again.",
+    "studio_deleted_successfully": "Studio deleted successfully!",
+    "failed_to_delete_studio_please_try_again": "Failed to delete studio. Please try again.",
+    "edit_studio": "Edit Studio",
+    "delete_studio": "Delete Studio",
+    "deleting": "Deleting...",
+    "delete": "Delete",
+    "cancel": "Cancel",
+    "are_you_sure_you_want_to_delete_this_studio": "Are you sure you want to delete this studio?",
+    "this_action_cannot_be_undone": "This action cannot be undone.",
+    "this_will_permanently_delete_the_studio_and_all_associated_data": "This will permanently delete the studio and all associated data.",
+    "save_changes": "Save changes",
+    "insufficient_credits_please_add_more_credits_to_continue": "Insufficient credits. Please add more credits to continue.",
+    "select_style": "Select Style",
+    "custom": "Custom",
+    "show": "Show",
+    "hide": "Hide",
+    "advanced_settings": "Advanced Settings",
+    "custom_prompt_required": "Custom Prompt (required)",
+    "enter_your_custom_prompt_here": "Enter your custom prompt here...",
+    "custom_negative_prompt_optional": "Custom Negative Prompt (optional)",
+    "enter_your_custom_negative_prompt_here": "Enter your custom negative prompt here...",
+    "hot": "HOT",
+    "new": "NEW",
+    "aspect_ratio": "Aspect Ratio",
+    "portrait_3_4": "Portrait (3:4)",
+    "landscape_4_3": "Landscape (4:3)",
+    "square_1_1": "Square (1:1)",
+    "portrait": "Portrait",
+    "landscape": "Landscape",
+    "square": "Square",
+    "pay_and_shoot": "Pay & Shoot",
+    "from_0_4_headshot": "from $0.4/Headshot",
+    "loading_credits": "Loading credits...",
+    "shoot": "Shoot",
+    "shooting": "Shooting...",
+    "failed_to_start_shoot": "Failed to start shoot",
+    "shooting_failed": "Shooting failed. Please check the uploaded photos or contact support.",
+    "failed_to_start_shoot_please_try_again_or_contact_support": "Failed to start shoot. Please try again or contact support.",
+    "shoot_started_successfully_1_credit_used": "Shoot started successfully. 1 credit used.",
+    "processing": "Processing...",
+    "completed": "Completed",
+    "failed": "Failed",
+    "our_privacy_policy": "Privacy Policy",
+    "if_you_have_any_questions_about_the_photos": "If you have any questions about the privacy of the photos, please review:"
+  },
+  "Credits": {
+    "credits": "Credits",
+    "your_current_balance": "Your current balance",
+    "buy_credits": "Buy Credits",
+    "check_your_credits_transactions_and_usage": "Check your credits transactions and usage.",
+    "if_you_have_any_questions_about_billing_please_contact_us_at": "If you have any questions about billing, please contact us at",
+    "billing": "Billing",
+    "credits_activity": "Credits Activity",
+    "30_day_credit_activity_summary": "30-day credit activity summary",
+    "credits_history": "Credits History",
+    "select_page_size": "Select page size",
+    "10_per_page": "10 per page",
+    "20_per_page": "20 per page",
+    "50_per_page": "50 per page",
+    "type": "Type",
+    "amount": "Amount",
+    "date": "Date"
+  },
+  "Settings": {
+    "settings": "Settings",
+    "manage_account_settings": "Manage account settings.",
+    "your_name": "Your Name",
+    "please_enter_a_display_name_you_are_comfortable_with": "Please enter a display name you are comfortable with.",
+    "max_32_characters": "Max 32 characters",
+    "save": "Save",
+    "changes": "Changes",
+    "your_name_has_been_updated": "Your name has been updated.",
+    "your_name_was_not_updated_please_try_again": "Your name was not updated. Please try again.",
+    "something_went_wrong": "Something went wrong.",
+    "your_avatar": "Your Avatar",
+    "please_enter_a_display_avatar_you_are_comfortable_with": "Please enter a display avatar you are comfortable with.",
+    "max_255_characters": "Max 255 characters",
+    "your_avatar_has_been_updated": "Your avatar has been updated.",
+    "your_avatar_was_not_updated_please_try_again": "Your avatar was not updated. Please try again.",
+    "something_went_wrong_with_avatar_update": "Something went wrong with avatar update.",
+    "delete_account": "Delete Account",
+    "this_is_a_danger_zone_be_careful": "This is a danger zone - Be careful !",
+    "are_you_sure": "Are you sure ?",
+    "permanently_delete_your_account_and_credits": "Permanently delete your {siteTitle} account and credits. This action cannot be undone - please proceed with caution."
+  },
+  "payment-status": {
+    "title": "Payment Status",
+    "loading": "Loading payment status...",
+    "success": "Payment successful!",
+    "processing": "Payment is still processing.",
+    "go_to_dashboard": "Go to Dashboard",
+    "return_to_pricing": "Return to Pricing",
+    "missing_session_id": "Missing session ID, please check your payment link again or contact support."
+  }
+}

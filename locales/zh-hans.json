@@ -1,0 +1,423 @@
+{
+  "auth": {
+    "sign_in": "登录",
+    "login": "登录",
+    "register": "注册",
+    "email_login_text": "您可以使用您的电子邮件",
+    "sign_in_with_google": "使用 Google 账号登录",
+    "sign_in_with_linkedin": "使用 LinkedIn 账号登录",
+    "back": "返回",
+    "welcome_back": "欢迎回来",
+    "use_email_to_sign_in": "使用电子邮件登录您的 HeadShots.fun 账户",
+    "don't_have_an_account": "还没有账户？",
+    "sign_up": "注册",
+    "email": "电子邮件",
+    "sign_up_with_email": "使用电子邮件注册",
+    "sign_in_with_email": "使用电子邮件登录",
+    "or": "或者",
+    "continue_with_google": "使用 Google 账号继续",
+    "continue_with_linkedin": "使用 LinkedIn 账号继续",
+    "create_an_account": "创建一个账户",
+    "enter_your_email_below_to_create_your_account": "请在下面输入您的电子邮件以创建您的账户",
+    "by_clicking_continue_you_agree_to_our": "点击继续，您同意我们的",
+    "terms_of_service": "服务条款",
+    "privacy_policy": "隐私政策"
+  },
+  "dashboard": {
+    "menu": "菜单",
+    "options": "选项",
+    "admin": "管理员",
+    "dashboard": "仪表板",
+    "billing": "账单",
+    "settings": "设置",
+    "homepage": "主页",
+    "mail_support": "邮件支持",
+    "admin_panel": "管理面板",
+    "users": "用户",
+    "studios": "工作室",
+    "predictions": "预测",
+    "orders": "订单",
+    "log_out": "登出"
+  },
+  "sitefooter": {
+    "sections": {
+      "Company": "公司",
+      "Ullr AI Products": "Ullr AI 产品",
+      "Resources": "资源"
+    },
+    "links": {
+      "About": "关于我们",
+      "Terms": "条款",
+      "Privacy": "隐私",
+      "PixMiller": "PixMiller",
+      "HeadShots fun": "HeadShots.fun",
+      "Ullr AI Lab": "Ullr AI 实验室",
+      "Pricing": "定价",
+      "Styles": "风格",
+      "Blog": "博客"
+    },
+    "copyright": "版权所有 © 2024。保留所有权利。",
+    "built_by": "开发者：",
+    "open_source_by": "开源提供："
+  },
+  "HeroLanding": {
+    "fun_pro_for_every_occasion": "适合每个场合的有趣或专业头像，尽在",
+    "headshots_fun": "HeadShots.fun",
+    "get_unique_portraits": "使用 HeadShots.fun 的顶级 AI 技术，只需 <bold>10 秒</bold> 即可获得独特的专业级肖像。价格是实体摄影的 <bold>二十分之一</bold>。",
+    "get_your_headshots": "获取您的新头像"
+  },
+  "Testimonials": {
+    "label": "精选评价",
+    "title": "我们的客户正在分享推荐",
+    "subtitle": "发现来自全球满意客户的热情反馈。",
+    "reviews": {
+      "1": "HeadShots.fun 完全改变了我的工作流程。AI 工具不仅高效，而且使用起来很有趣，使头像创作过程既专业又愉快。",
+      "2": "HeadShots.fun 让我为所有社交媒体活动创建专业头像变得超级简单。",
+      "3": "HeadShots.fun 通过提供与我品牌风格完美匹配的专业质量图像，显著提升了我的品牌工作。",
+      "4": "为我的创业公司创建头像从未如此简单和愉快。HeadShots.fun 在保持轻松有趣的过程中提供了出色的结果。",
+      "5": "我喜欢 HeadShots.fun 如何平衡创意和专业性。AI 工具的灵活性让我能够设计既有趣又完全适合我创意项目的头像。",
+      "6": "HeadShots.fun 的效率和质量都非常出色。我能够在几秒钟内创建出工作室级别的头像，而且这个过程出乎意料地愉快。",
+      "7": "HeadShots.fun 已成为我们营销活动的宝贵工具。AI 生成的头像不仅专业，而且具有独特的趣味元素，使我们的个人资料脱颖而出。",
+      "8": "HeadShots.fun 的质量和速度令人印象深刻。我能够在几秒钟内创建出看起来像是在工作室拍摄的专业头像。"
+    }
+  },
+  "InfoLanding": {
+    "title": "激发您的创造力",
+    "description": "通过 HeadShots.fun 释放您头像的乐趣和潜力。将简单的快照转变为反映真实自我的迷人 AI 增强图像。",
+    "list": {
+      "title": {
+        "1": "轻松创作",
+        "2": "AI 个性化",
+        "3": "提升您的形象"
+      },
+      "description": {
+        "1": "享受无缝直观的过程，轻松创建完美的头像。",
+        "2": "使用先进的 AI 工具定制您头像的每个方面，确保它独一无二地展现您。",
+        "3": "无论是工作还是娱乐，确保您的在线形象脱颖而出，将乐趣与专业结合的头像让您与众不同。"
+      }
+    }
+  },
+  "Features": {
+    "title": "探索我们的功能",
+    "subtitle": "释放您的创造力，使用 AI 驱动的工具，让每张头像都独具特色。",
+    "features": {
+      "1": {
+        "title": "轻松创作",
+        "description": "定制您的 AI 生成头像，以适应您独特的风格。我们直观的工具让调整每个细节变得简单。"
+      },
+      "2": {
+        "title": "个性化 AI",
+        "description": "在几秒钟内生成令人惊叹的头像。借助 AI 的力量，您再也不用等待专业质量的图像。"
+      },
+      "3": {
+        "title": "专业品质",
+        "description": "轻松将您的头像融入个人或专业档案，格式针对任何平台进行了优化。"
+      },
+      "4": {
+        "title": "AI 增强创意",
+        "description": "您的数据在我们这里很安全。我们优先考虑您的隐私，确保您的头像被安全地存储和共享。"
+      },
+      "5": {
+        "title": "有趣且引人入胜",
+        "description": "利用 AI 的力量探索创意可能性。轻松尝试不同的风格和外观。"
+      },
+      "6": {
+        "title": "有趣且引人入胜",
+        "description": "享受一个既有趣又专业的头像创作过程。"
+      }
+    }
+  },
+  "NotFound": {
+    "pageNotFound": "页面未找到。",
+    "backTo": "返回",
+    "homepage": "主页"
+  },
+  "StepsSection": {
+    "step": "步骤",
+    "uploadYourSelfies": "上传几张自拍",
+    "uploadYourSelfiesDescription": "选择1-5张您的正面自拍照，展现不同场景下的面貌。",
+    "personalizeYourStyle": "选择喜爱的风格",
+    "personalizeYourStyleDescription": "探索多样风格或自定义描述，打造独一无二的头像。",
+    "instantAIMagic": "AI 瞬间魔法",
+    "instantAIMagicDescription": "先进 AI，数秒内生成专业级头像，随时展现最佳形象。",
+    "quickAndEasyProcess": "只需三步，简单快捷",
+    "createFunAndProHeadshotsIn3SimpleSteps": "三步轻松创建趣味十足的专业头像",
+    "experienceTheFastestAITechnologyAtHeadShotsFunForStunningPersonalizedHeadshotsPerfectForEveryOccasion": "体验 HeadShots.fun 超快的 AI 技术，打造适合各种场合的惊艳个性化头像。"
+  },
+  "CTA": {
+    "title": "让自己焕然一新！",
+    "description": "厌倦了单调乏味的自拍？我们的AI智能照相亭为您带来全新体验！无需专业设备，只需轻点几下，瞬间变身魅力四射！",
+    "button": "立即体验",
+    "cool_button": "立即拍摄您的趣味头像！",
+    "cool_title": "AI 魔法，瞬间为您创造专业有趣头像",
+    "cool_description": "几秒钟内创建令人惊叹的趣味的专业肖像，无需摄影师。体验 HeadShots.fun！"
+  },
+  "BentoGrid": {
+    "customizable_prompts": "自定义提示",
+    "secure_by_design": "安全设计",
+    "secure_by_design_description": "顶级安全保护您的数据，让您安心无忧。",
+    "usually_in_10_seconds": "通常仅需10秒",
+    "lightning_fast_results": "闪电般的速度",
+    "lightning_fast_results_description": "10 秒内获得 AI 生成的精美头像。",
+    "professional_quality": "专业品质",
+    "professional_quality_description": "AI 生成的 HeadShots.fun 头像媲美专业摄影，适合各种场合和用途。",
+    "effortlessly_fun": "轻松有趣",
+    "effortlessly_fun_description": "从拍摄到接收头像，享受流畅愉快的过程。既专业又充满乐趣。",
+    "superhero": "超级英雄",
+    "witch": "巫师",
+    "clay": "粘土风格"
+  },
+  "NavBar": {
+    "dashboard": "仪表板",
+    "sign_in": "登录",
+    "blog": "博客",
+    "generator-styles": "风格灵感",
+    "pricing": "定价"
+  },
+  "HeadshotStylePage": {
+    "label": "HeadShots.fun 风格",
+    "title": "适用于任何场合的多样风格",
+    "subtitle": "探索我们多样化的 AI 生成头像风格。快速、简单、个性化，只为您！"
+  },
+  "PricingPage": {
+    "metadata": {
+      "title": "价格 – {siteTitle}",
+      "description": "探寻我们的头像生成器定价"
+    },
+    "label": "价格",
+    "title": "简单透明的定价",
+    "subtitle": "选择适合您需求的完美计划。没有隐藏费用，没有意外",
+    "trial_section_description": "享受所有计划的 7 天无风险试用。如果未使用点数，全额退款",
+    "1_credit_1_headshot": "1 点数 = 1 张头像",
+    "processing": "处理中...",
+    "purchase": "购买",
+    "most_popular": "最受欢迎",
+    "package": "套餐",
+    "price": "总价",
+    "price_per": "单价",
+    "credits": "点数",
+    "plans": {
+      "1": {
+        "description": "自拍新手：开启您靓丽的 AI 头像之旅",
+        "features": "2 点数"
+      },
+      "2": {
+        "description": "社交达人：为您的在线形象增添魅力",
+        "features": "10 点数"
+      },
+      "3": {
+        "description": "形象升级：超快速展现您的多面魅力",
+        "features": "25 点数"
+      },
+      "4": {
+        "description": "专业精英：打造职场精英的完美形象",
+        "features": "50 点数"
+      },
+      "5": {
+        "description": "团队先锋：提升整个团队的视觉形象",
+        "features": "100 点数"
+      },
+      "6": {
+        "description": "无限创意：尽情探索头像的无限可能",
+        "features": "200 点数"
+      }
+    }
+  },
+  "PricingPageFAQ": {
+    "title": "常见问题",
+    "label": "价格",
+    "subtitle": "关于我们价格的常见问题。",
+    "qa": [
+      [
+        "什么是 HeadShots.fun？",
+        "HeadShots.fun 是一个由 AI 驱动的平台，让您能够快速、轻松地创建独特而惊艳的头像，为每个场合量身定制。"
+      ],
+      [
+        "点数系统是如何运作的？",
+        "1 个点数 = 1 张头像。我们提供各种点数套餐以满足不同需求。您可以购买点数来生成 AI 头像。购买的点数越多，获得的价值就越高。"
+      ],
+      [
+        "点数套餐的价格是多少？",
+        "我们的价格从 2.99 美元起，非常适合初次尝试我们的服务。我们还提供更大的套餐，其中最受欢迎的是 19.9 美元的「快照超级明星」计划，非常适合经常使用的用户。"
+      ],
+      [
+        "有哪些功能可以帮助我定制头像？",
+        "当然有！我们提供由 AI 驱动的工具，旨在让每张头像都独一无二。您可以探索各种功能，释放创意，为不同场合个性化您的头像。"
+      ],
+      [
+        "用于生成头像的 AI 技术有多快？",
+        "我们使用最快的 AI 技术，确保快速高效地生成头像，一般 10 秒即可完成。我们的目标是在最短的时间内为您提供令人惊叹的结果。"
+      ],
+      [
+        "我应该上传什么样的照片到平台？",
+        "我们建议您上传多张正面照片，以确保您的头像尽可能准确。这些照片需要能看到清晰/无遮挡的面部。请确保您的照片清晰、高质量，且不包含其他人或动物。"
+      ],
+      [
+        "我可以用同一张照片生成多个头像吗？",
+        "是的，您可以用同一张照片生成多个头像。我们的 AI 技术允许从单张照片生成多种输出，因此您可以用同一张图片创建不同的外观和风格。"
+      ]
+    ]
+  },
+  "BlogPage": {
+    "blog": "博客",
+    "description": "HeadShots.fun 的最新新闻和更新",
+    "categories": "分类",
+    "all": "全部",
+    "news": "新闻",
+    "education": "教学",
+    "more_articles": "更多文章"
+  },
+  "StudioPage": {
+    "studios": "工作室",
+    "create_new_studio": "创建工作室",
+    "create_new_studio_short": "创建",
+    "your_studios": "您的工作室",
+    "a_list_of_all_your_created_studios": "您创建的所有工作室列表",
+    "name": "名称",
+    "type": "类型",
+    "headshots": "头像",
+    "created_at": "创建时间",
+    "no_studios_created": "尚未创建工作室",
+    "you_dont_have_any_studios_yet": "您还没有任何工作室。开始创建工作室吧",
+    "error_studio_type_required": "请选择工作室类型",
+    "error_studio_name_required": "请输入工作室名称",
+    "error_at_least_one_image": "请至少上传一张图片",
+    "error_max_5_images": "最多可以上传5张图片",
+    "error_failed_to_upload_image": "图片上传失败",
+    "success_studio_created": "工作室创建成功！",
+    "error_failed_to_create_studio": "工作室创建失败。请重试。",
+    "back_to_dashboard": "返回仪表板",
+    "enter_basic_info_for_your_studio": "输入您工作室的基本信息",
+    "studio_name": "工作室名称",
+    "this_is_the_name_that_will_be_displayed_for_your_studio": "这是将显示的您工作室的名称。",
+    "studio_type": "工作室类型",
+    "male": "男性",
+    "female": "女性",
+    "kid": "儿童",
+    "select_the_type_of_studio_you_want_to_create": "选择您要创建的工作室类型。",
+    "upload_sample_photos": "上传参考照片",
+    "please_upload_1_5_clear_front_facing_photos_that_meet_the_sample_photo_requirements": "请上传1-5张清晰的正面照片，符合参考照片要求。",
+    "set_as_main": "设为主图",
+    "main": "主图",
+    "creating": "创建中...",
+    "upload_a_file": "上传文件",
+    "or_drag_and_drop": "或拖放到此处",
+    "png_jpg_gif_up_to_10mb": "PNG、JPG、GIF，最大10MB",
+    "create_studio": "创建工作室",
+    "sample_photo_requirements": "参考照片要求",
+    "make_sure_your_sample_photos_meet_these_standards": "确保您的参考照片符合以下标准：",
+    "front_and_clear": "正面清晰",
+    "multiple_people": "多人照片",
+    "side_shots": "侧面照片",
+    "blurry_photos": "模糊照片",
+    "obstructing": "遮挡物",
+    "detailed_explanation_for": "详细说明",
+    "your_studio_name": "您的工作室名称",
+    "select_studio_type": "选择工作室类型",
+    "error_failed_to_fetch_prediction_result": "获取预测结果失败。",
+    "shooting_results": "拍摄结果",
+    "download": "下载",
+    "open_in_new_tab": "在新标签页中打开",
+    "close": "关闭",
+    "your_studio_created_successfully": "您的工作室创建成功！",
+    "ready_to_shoot": "准备拍摄？",
+    "click_shoot_below_to_begin_creating_your_first_headshot": "点击下方的「拍摄」开始创建您的第一张头像",
+    "each_shoot_generates_a_unique_headshot_even_with_the_same_style_or_prompt_try_multiple_times": "每次拍摄都会产生独特的头像，即使使用相同的风格或提示。可以多次尝试同一种风格。",
+    "studio_updated_successfully": "工作室更新成功！",
+    "failed_to_update_studio_please_try_again": "更新工作室失败。请重试。",
+    "studio_deleted_successfully": "工作室删除成功！",
+    "failed_to_delete_studio_please_try_again": "删除工作室失败。请重试。",
+    "edit_studio": "编辑工作室",
+    "delete_studio": "删除工作室",
+    "deleting": "删除中...",
+    "delete": "删除",
+    "cancel": "取消",
+    "are_you_sure_you_want_to_delete_this_studio": "您确定要删除这个工作室吗？",
+    "this_action_cannot_be_undone": "此操作无法撤销。",
+    "this_will_permanently_delete_the_studio_and_all_associated_data": "这将永久删除工作室和所有相关数据。",
+    "save_changes": "保存更改",
+    "insufficient_credits_please_add_more_credits_to_continue": "点数不足。请购买更多点数以继续。",
+    "select_style": "选择风格",
+    "custom": "自定义",
+    "quick_prompts_use_cases": "快速提示（使用场景）",
+    "show": "显示",
+    "hide": "隐藏",
+    "advanced_settings": "高级设置",
+    "custom_prompt_required": "自定义提示（必填）",
+    "enter_your_custom_prompt_here": "在此输入您的自定义提示...",
+    "custom_negative_prompt_optional": "自定义负面提示（可选）",
+    "enter_your_custom_negative_prompt_here": "在此输入您的自定义负面提示...",
+    "hot": "热门",
+    "new": "新品",
+    "aspect_ratio": "宽高比",
+    "portrait_3_4": "竖版（3:4）",
+    "landscape_4_3": "横版（4:3）",
+    "square_1_1": "正方形（1:1）",
+    "portrait": "竖版",
+    "landscape": "横版",
+    "square": "正方形",
+    "pay_and_shoot": "付费并拍摄",
+    "from_0_4_headshot": "每张头像 $0.4 起",
+    "loading_credits": "点数加载中...",
+    "shoot": "拍摄",
+    "shooting": "拍摄中...",
+    "failed_to_start_shoot": "拍摄失败",
+    "shooting_failed": "拍摄失败，请检查上传的照片是否符合要求或联系客服",
+    "failed_to_start_shoot_please_try_again_or_contact_support": "拍摄失败。请重试或联系支持。",
+    "shoot_started_successfully_1_credit_used": "拍摄成功。已使用 1 点数。",
+    "processing": "处理中...",
+    "completed": "完成",
+    "failed": "生成失败",
+    "our_privacy_policy": "隐私政策",
+    "if_you_have_any_questions_about_the_photos": "如果您对照片的隐私有任何疑问，请查看："
+  },
+  "Credits": {
+    "credits": "点数",
+    "your_current_balance": "当前余额",
+    "buy_credits": "购买点数",
+    "check_your_credits_transactions_and_usage": "查看您的点数交易和使用情况。",
+    "if_you_have_any_questions_about_billing_please_contact_us_at": "如果您对账单有任何疑问，请联系我们",
+    "billing": "账单",
+    "credits_activity": "点数活动",
+    "30_day_credit_activity_summary": "30天点数摘要",
+    "credits_history": "点数历史",
+    "select_page_size": "选择页面大小",
+    "10_per_page": "每页10个",
+    "20_per_page": "每页20个",
+    "50_per_page": "每页50个",
+    "type": "类型",
+    "amount": "数量",
+    "date": "日期"
+  },
+  "Settings": {
+    "settings": "设置",
+    "manage_account_settings": "管理账户资料",
+    "your_name": "您的名字",
+    "please_enter_a_display_name_you_are_comfortable_with": "请输入一个您感到舒适的显示名称。",
+    "max_32_characters": "最大32个字符",
+    "save": "保存",
+    "changes": "更改",
+    "your_name_has_been_updated": "您的名字已更新。",
+    "your_name_was_not_updated_please_try_again": "您的名字未更新。请重试。",
+    "something_went_wrong": "出了点问题。",
+    "your_avatar": "您的头像",
+    "please_enter_a_display_avatar_you_are_comfortable_with": "请输入一个您喜欢的头像 URL。",
+    "max_255_characters": "最大255个字符",
+    "your_avatar_has_been_updated": "您的头像已更新。",
+    "your_avatar_was_not_updated_please_try_again": "您的头像未更新。请重试。",
+    "something_went_wrong_with_avatar_update": "更新头像时出了点问题。",
+    "delete_account": "删除账户",
+    "this_is_a_danger_zone_be_careful": "这是危险区域 - 小心！",
+    "are_you_sure": "您确定吗？",
+    "permanently_delete_your_account_and_credits": "永久删除您的 {siteTitle} 账户和点数。此操作无法撤销 - 请谨慎行事。"
+  },
+  "payment-status": {
+    "title": "支付状态",
+    "loading": "检查支付状态中...",
+    "success": "支付成功！",
+    "processing": "支付仍在处理中。",
+    "go_to_dashboard": "前往仪表板",
+    "return_to_pricing": "返回定价",
+    "missing_session_id": "缺少会话 ID，请再次检查您的支付链接，或联系客服支持。"
+  }
+}

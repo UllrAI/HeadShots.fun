@@ -9,6 +9,8 @@ import { categories, styles, domainPath } from "@/components/shared/styles";
 import { useRouter } from "next/navigation";
 import { toast } from "sonner";
 import { getUserCredits, spendCredits } from "@/lib/credits";
+import { Badge } from "@/components/ui/badge";
+import { useTranslations } from "next-intl";
 
 interface ShootModalProps {
     studioId: string;
@@ -16,6 +18,7 @@ interface ShootModalProps {
 }
 
 export function ShootModal({ studioId, onShootComplete }: ShootModalProps) {
+    const t = useTranslations('StudioPage');
     const [isOpen, setIsOpen] = useState(false);
     const [selectedCategory, setSelectedCategory] = useState("all");
     const [selectedStyle, setSelectedStyle] = useState("");
@@ -25,27 +28,36 @@ export function ShootModal({ studioId, onShootComplete }: ShootModalProps) {
     const [customNegativePrompt, setCustomNegativePrompt] = useState("");
     const [isCustomPrompt, setIsCustomPrompt] = useState(false);
     const [isShooting, setIsShooting] = useState(false);
-    const [userCredits, setUserCredits] = useState(0);
+    const [userCredits, setUserCredits] = useState<number | null>(null);
+    const [selectedUseCase, setSelectedUseCase] = useState("");
     const router = useRouter();
 
+    const fetchCredits = async () => {
+        try {
+            const credits = await getUserCredits();
+            setUserCredits(credits);
+        } catch (error) {
+            toast.error("Failed to fetch user credits. Please try again.");
+        }
+    };
+
     useEffect(() => {
-        const fetchCredits = async () => {
-            try {
-                const credits = await getUserCredits();
-                setUserCredits(credits);
-            } catch (error) {
-                console.error("Failed to fetch user credits:", error);
-                toast.error("Failed to fetch user credits. Please try again.");
-            }
-        };
-        fetchCredits();
-    }, []);
+        if (isOpen) {
+            fetchCredits();
+        }
+    }, [isOpen]);
 
     const filteredStyles = useMemo(() => {
         return selectedCategory === "all"
             ? styles
             : styles.filter(style => style.category === selectedCategory);
     }, [selectedCategory]);
+
+    useEffect(() => {
+        if (filteredStyles.length > 0 && !isCustomPrompt) {
+            setSelectedStyle(filteredStyles[0].name);
+        }
+    }, [filteredStyles, isCustomPrompt]);
 
     const handleShoot = async () => {
         setIsShooting(true);
@@ -54,8 +66,8 @@ export function ShootModal({ studioId, onShootComplete }: ShootModalProps) {
         const negative_prompt = isCustomPrompt ? customNegativePrompt : selectedStyleData?.negative_prompt;
         const style = isCustomPrompt ? "Custom" : selectedStyleData?.name;
 
-        if (userCredits <= 0) {
-            toast.error("Insufficient credits. Please add more credits to continue.");
+        if (userCredits === null || userCredits <= 0) {
+            toast.error(t("insufficient_credits_please_add_more_credits_to_continue"));
             setIsShooting(false);
             return;
         }
@@ -75,7 +87,7 @@ export function ShootModal({ studioId, onShootComplete }: ShootModalProps) {
             });
 
             if (!response.ok) {
-                throw new Error('Failed to start shoot');
+                throw new Error(t("failed_to_start_shoot"));
             }
 
             const data = await response.json();
@@ -85,7 +97,7 @@ export function ShootModal({ studioId, onShootComplete }: ShootModalProps) {
             const newCredits = await spendCredits(1);
             setUserCredits(newCredits);
 
-            toast.success("Shoot started successfully. 1 credit used.");
+            toast.success(t("shoot_started_successfully_1_credit_used"));
             router.refresh();
             setIsOpen(false);
             if (onShootComplete) {
@@ -93,7 +105,7 @@ export function ShootModal({ studioId, onShootComplete }: ShootModalProps) {
             }
         } catch (error) {
             console.error("Error starting shoot:", error);
-            toast.error("Failed to start shoot. Please try again or contact support.");
+            toast.error(t("failed_to_start_shoot_please_try_again_or_contact_support"));
         } finally {
             setIsShooting(false);
         }
@@ -103,12 +115,12 @@ export function ShootModal({ studioId, onShootComplete }: ShootModalProps) {
         <>
             <Button variant="default" onClick={() => setIsOpen(true)}>
                 <Camera className="mr-2 size-4" />
-                Shoot
+                {t("shoot")}
             </Button>
             <Dialog open={isOpen} onOpenChange={setIsOpen}>
                 <DialogContent className="h-[90vh] max-w-6xl overflow-y-auto">
                     <DialogHeader>
-                        <DialogTitle>Select Style</DialogTitle>
+                        <DialogTitle>{t("select_style")}</DialogTitle>
                     </DialogHeader>
                     <div className="flex space-x-2 overflow-x-auto pb-2">
                         {categories.map((category) => (
@@ -116,7 +128,6 @@ export function ShootModal({ studioId, onShootComplete }: ShootModalProps) {
                                 key={category.id}
                                 onClick={() => {
                                     setSelectedCategory(category.id);
-                                    setSelectedStyle("");
                                     setIsCustomPrompt(false);
                                 }}
                                 variant={selectedCategory === category.id && !isCustomPrompt ? "default" : "outline"}
@@ -133,20 +144,23 @@ export function ShootModal({ studioId, onShootComplete }: ShootModalProps) {
                             variant={isCustomPrompt ? "default" : "outline"}
                             className="rounded-full px-4 py-2"
                         >
-                            Custom
+                            {t("custom")}
                         </Button>
                     </div>
                     {isCustomPrompt ? (
-                        <div className="mt-4 h-[54vh] gap-4 lg:h-[60vh]">
+                        <div className="h-[55vh] gap-4 overflow-x-auto px-2 lg:h-[60vh]">
                             <div>
-                                <Label htmlFor="customPrompt">Custom Prompt (required)</Label>
+                                <Label htmlFor="customPrompt">{t("custom_prompt_required")}</Label>
                                 <Textarea
                                     id="customPrompt"
                                     value={customPrompt}
                                     onChange={(e) => setCustomPrompt(e.target.value)}
-                                    placeholder="Enter your custom prompt here..."
+                                    placeholder={t("enter_your_custom_prompt_here")}
                                     className="mt-1"
                                 />
+                            </div>
+                            <div className="mt-4">
+                                <Label>{t("quick_prompts_use_cases")}</Label>
                             </div>
                             <div>
                                 <Button
@@ -155,16 +169,16 @@ export function ShootModal({ studioId, onShootComplete }: ShootModalProps) {
                                     size="sm"
                                     className="mt-4"
                                 >
-                                    {showNegativePrompt ? "Hide" : "Show"} Advanced Settings
+                                    {showNegativePrompt ? t("hide") : t("show")} {t("advanced_settings")}
                                 </Button>
                                 {showNegativePrompt && (
                                     <div className="mt-2">
-                                        <Label htmlFor="customNegativePrompt">Custom Negative Prompt (optional)</Label>
+                                        <Label htmlFor="customNegativePrompt">{t("custom_negative_prompt_optional")}</Label>
                                         <Textarea
                                             id="customNegativePrompt"
                                             value={customNegativePrompt}
                                             onChange={(e) => setCustomNegativePrompt(e.target.value)}
-                                            placeholder="Enter your custom negative prompt here..."
+                                            placeholder={t("enter_your_custom_negative_prompt_here")}
                                             className="mt-1"
                                         />
                                     </div>
@@ -195,10 +209,10 @@ export function ShootModal({ studioId, onShootComplete }: ShootModalProps) {
                                                 className="size-full rounded-md object-cover"
                                             />
                                             {style.hot && (
-                                                <span className="absolute right-1 top-1 rounded-xl bg-yellow-400 px-2 py-1 text-xs font-bold text-yellow-900">HOT</span>
+                                                <span className="absolute right-1 top-1 rounded-xl bg-yellow-400 px-2 py-1 text-xs font-bold text-yellow-900">{t("hot")}</span>
                                             )}
                                             {style.isNew && (
-                                                <span className="absolute right-1 top-1 rounded-xl bg-destructive px-2 py-1 text-xs font-bold text-white">NEW</span>
+                                                <span className="absolute right-1 top-1 rounded-xl bg-destructive px-2 py-1 text-xs font-bold text-white">{t("new")}</span>
                                             )}
                                         </div>
                                         <span className="text-xs font-normal">{style.name}</span>
@@ -210,57 +224,64 @@ export function ShootModal({ studioId, onShootComplete }: ShootModalProps) {
                     <DialogFooter className="flex flex-col items-center justify-between space-y-4 md:flex-row md:space-x-4 md:space-y-0">
                         <div className="flex w-full flex-wrap items-center justify-start space-x-2 space-y-4 md:space-x-4 md:space-y-0">
                             <Label htmlFor="aspect-ratio" className="mr-2 mt-4 lg:mt-0">
-                                Aspect Ratio:
+                                {t("aspect_ratio")}:
                             </Label>
                             <Button
                                 variant={aspectRatio === "Portrait" ? "default" : "outline"}
                                 onClick={() => setAspectRatio("Portrait")}
-                                title="Portrait (3:4)"
+                                title={t("portrait_3_4")}
                                 className="gap-1"
                             >
                                 <RectangleHorizontal className="size-4 rotate-90" />
-                                <span className="hidden lg:inline">Portrait</span>
+                                <span className="hidden lg:inline">{t("portrait")}</span>
                             </Button>
                             <Button
                                 variant={aspectRatio === "Landscape" ? "default" : "outline"}
                                 onClick={() => setAspectRatio("Landscape")}
-                                title="Landscape (4:3)"
+                                title={t("landscape_4_3")}
                                 className="gap-1"
                             >
                                 <RectangleHorizontal className="size-4" />
-                                <span className="hidden lg:inline">Landscape</span>
+                                <span className="hidden lg:inline">{t("landscape")}</span>
                             </Button>
                             <Button
                                 variant={aspectRatio === "Square" ? "default" : "outline"}
                                 onClick={() => setAspectRatio("Square")}
-                                title="Square (1:1)"
+                                title={t("square_1_1")}
                                 className="gap-1"
                             >
                                 <Square className="size-4" />
-                                <span className="hidden lg:inline">Square</span>
+                                <span className="hidden lg:inline">{t("square")}</span>
                             </Button>
                         </div>
                         <div className="flex w-full flex-col items-center justify-between md:w-auto md:flex-row">
-                            {userCredits <= 0 && (
-                                <Button
-                                    onClick={() => router.push('/pricing')}
-                                    className="flex items-center whitespace-nowrap"
-                                >
-                                    <Coins className="mr-2 size-4" />
-                                    Buy Credits
-                                </Button>
+                            {userCredits !== null && userCredits <= 0 && (
+                                <div className="flex flex-col items-center gap-4 md:flex-row">
+                                    <p className="text-xs text-muted-foreground">{t("from_0_4_headshot")}</p>
+                                    <Button
+                                        onClick={() => router.push('/pricing')}
+                                        className="flex items-center whitespace-nowrap"
+                                    >
+                                        <Coins className="mr-2 size-4" />
+                                        {t("pay_and_shoot")}
+                                    </Button>
+                                </div>
                             )}
-                            {userCredits > 0 && (
-                                <Button
-                                    onClick={handleShoot}
-                                    disabled={(isCustomPrompt && !customPrompt.trim()) || (!isCustomPrompt && !selectedStyle) || isShooting || userCredits <= 0}
-                                    className="flex items-center whitespace-nowrap"
-                                >
-                                    <Camera className="mr-2 size-4" />
-                                    {isShooting ? "Shooting..." : "Shoot"}
-                                </Button>
+                            {userCredits !== null && userCredits > 0 && (
+                                <div className="flex flex-col items-center gap-4 md:flex-row">
+                                    <Button
+                                        onClick={handleShoot}
+                                        disabled={(isCustomPrompt && !customPrompt.trim()) || (!isCustomPrompt && !selectedStyle) || isShooting || userCredits <= 0}
+                                        className="flex items-center whitespace-nowrap"
+                                    >
+                                        <Camera className="mr-2 size-4" />
+                                        {isShooting ? t("shooting") : t("shoot")}
+                                    </Button>
+                                </div>
                             )}
-                           
+                            {userCredits === null && (
+                                <p>{t("loading_credits")}</p>
+                            )}
                         </div>
                     </DialogFooter>
                 </DialogContent>

@@ -13,6 +13,7 @@ HeadShots.fun is an AI-powered SaaS platform that generates fun or professional 
 - 📸 **Stand with Fastest AI Model**: Generate your headshots within seconds
 - 📱 **Responsive Design**: Seamless cross-device experience
 - 💼 **SaaS Ready**: Stripe ready, ready for your HeadShots SaaS idea
+- 🌐 **i18n**: Multi-language support
 
 ## Key Features
 
@@ -42,6 +43,11 @@ HeadShots.fun is an AI-powered SaaS platform that generates fun or professional 
    ```bash
    npm run dev
    ```
+
+## Roadmap
+
+- [x] Add i18n
+- [ ] Refactor Admin Dashboard
 
 ## Tech Stack
 

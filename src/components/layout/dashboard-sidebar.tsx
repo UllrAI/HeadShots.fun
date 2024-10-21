@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { SidebarNavItem } from "@/types";
 import { Menu, PanelLeftClose, PanelRightClose } from "lucide-react";
+import { useTranslations } from 'next-intl';
 
 import { siteConfig } from "@/config/site";
 import { cn } from "@/lib/utils";
@@ -19,7 +20,6 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-// import ProjectSwitcher from "@/components/dashboard/project-switcher";
 // import { UpgradeCard } from "@/components/dashboard/upgrade-card";
 import { Icons } from "@/components/shared/icons";
 import { ModeToggle } from "@/components/layout/mode-toggle";
@@ -32,25 +32,7 @@ interface DashboardSidebarProps {
 
 export function DashboardSidebar({ links }: DashboardSidebarProps) {
   const path = usePathname();
-
-  // NOTE: Use this if you want save in local storage -- Credits: Hosna Qasmei
-  //
-  // const [isSidebarExpanded, setIsSidebarExpanded] = useState(() => {
-  //   if (typeof window !== "undefined") {
-  //     const saved = window.localStorage.getItem("sidebarExpanded");
-  //     return saved !== null ? JSON.parse(saved) : true;
-  //   }
-  //   return true;
-  // });
-
-  // useEffect(() => {
-  //   if (typeof window !== "undefined") {
-  //     window.localStorage.setItem(
-  //       "sidebarExpanded",
-  //       JSON.stringify(isSidebarExpanded),
-  //     );
-  //   }
-  // }, [isSidebarExpanded]);
+  const t = useTranslations('dashboard');
 
   const { isTablet } = useMediaQuery();
   const [isSidebarExpanded, setIsSidebarExpanded] = useState(!isTablet);
@@ -111,13 +93,10 @@ export function DashboardSidebar({ links }: DashboardSidebarProps) {
 
               <nav className="flex flex-1 flex-col gap-8 px-4 pt-4">
                 {links.map((section) => (
-                  <section
-                    key={section.title}
-                    className="flex flex-col gap-0.5"
-                  >
+                  <section key={section.title} className="flex flex-col gap-0.5">
                     {isSidebarExpanded ? (
                       <p className="text-xs text-muted-foreground">
-                        {section.title}
+                        {t(section.title)}
                       </p>
                     ) : (
                       <div className="h-4" />
@@ -141,7 +120,7 @@ export function DashboardSidebar({ links }: DashboardSidebarProps) {
                                 )}
                               >
                                 <Icon className="size-5" />
-                                {item.title}
+                                {t(item.title)}
                                 {item.badge && (
                                   <Badge className="ml-auto flex size-5 shrink-0 items-center justify-center rounded-full">
                                     {item.badge}
@@ -169,7 +148,7 @@ export function DashboardSidebar({ links }: DashboardSidebarProps) {
                                   </Link>
                                 </TooltipTrigger>
                                 <TooltipContent side="right">
-                                  {item.title}
+                                  {t(item.title)}
                                 </TooltipContent>
                               </Tooltip>
                             )}
@@ -202,6 +181,7 @@ export function MobileSheetSidebar({ links }: DashboardSidebarProps) {
   const path = usePathname();
   const [open, setOpen] = useState(false);
   const { isSm, isMobile } = useMediaQuery();
+  const t = useTranslations('dashboard');
 
   if (isSm || isMobile) {
     return (
@@ -238,7 +218,7 @@ export function MobileSheetSidebar({ links }: DashboardSidebarProps) {
                     className="flex flex-col gap-0.5"
                   >
                     <p className="text-xs text-muted-foreground">
-                      {section.title}
+                      {t(section.title)}
                     </p>
 
                     {section.items.map((item) => {
@@ -262,7 +242,7 @@ export function MobileSheetSidebar({ links }: DashboardSidebarProps) {
                               )}
                             >
                               <Icon className="size-5" />
-                              {item.title}
+                              {t(item.title)}
                               {item.badge && (
                                 <Badge className="ml-auto flex size-5 shrink-0 items-center justify-center rounded-full">
                                   {item.badge}

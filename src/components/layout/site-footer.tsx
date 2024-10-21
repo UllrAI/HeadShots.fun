@@ -1,19 +1,21 @@
 import * as React from "react";
 import Link from "next/link";
-
+import LocaleSwitcher from "@/components/locale/locale-switcher";
 import { footerLinks, siteConfig } from "@/config/site";
 import { cn } from "@/lib/utils";
 import { ModeToggle } from "@/components/layout/mode-toggle";
 import { Icons } from "../shared/icons";
+import { useTranslations } from "next-intl";
 
 export function SiteFooter({ className }: React.HTMLAttributes<HTMLElement>) {
+  const t = useTranslations('sitefooter');
   return (
     <footer className={cn("border-t", className)}>
       <div className="container grid max-w-6xl grid-cols-2 gap-6 py-14 md:grid-cols-5">
         {footerLinks.map((section) => (
           <div key={section.title}>
             <span className="text-sm font-medium text-foreground">
-              {section.title}
+              {t(`sections.${section.title}`)}
             </span>
             <ul className="mt-4 list-inside space-y-3">
               {section.items?.map((link) => (
@@ -22,7 +24,7 @@ export function SiteFooter({ className }: React.HTMLAttributes<HTMLElement>) {
                     href={link.href}
                     className="text-sm text-muted-foreground hover:text-primary"
                   >
-                    {link.title}
+                    {t(`links.${link.title}`)}
                   </Link>
                 </li>
               ))}
@@ -37,18 +39,15 @@ export function SiteFooter({ className }: React.HTMLAttributes<HTMLElement>) {
             </span>
           </Link>
           <span className="mt-2 text-xs text-muted-foreground">
-            Copyright &copy; 2024. All rights reserved.
+            {t('copyright')}
           </span> 
         </div>
       </div>
 
       <div className="border-t py-4">
         <div className="container flex max-w-6xl items-center justify-between">
-          {/* <span className="text-muted-foreground text-sm">
-            Copyright &copy; 2024. All rights reserved.
-          </span> */}
-          <p className="text-left text-sm text-muted-foreground">
-            Powered by{" "}
+          <div className="text-left text-sm text-muted-foreground">
+            <span className="font-medium">{t('built_by')}{" "}</span>
             <Link
               href="https://headshots.fun"
               target="_blank"
@@ -56,7 +55,9 @@ export function SiteFooter({ className }: React.HTMLAttributes<HTMLElement>) {
             >
               HeadShots.fun
             </Link>
-            . Open source by {" "}
+            <span className="mr-2"> , </span>
+
+            <span className="font-medium">{t('open_source_by')}{" "}</span>
             <Link
               href="https://ullrai.com"
               target="_blank"
@@ -64,10 +65,10 @@ export function SiteFooter({ className }: React.HTMLAttributes<HTMLElement>) {
             >
               UllrAI Lab
             </Link>
-            .
-          </p>
+          </div>
 
           <div className="flex items-center gap-3">
+            <LocaleSwitcher />
             <Link
               href={siteConfig.links.github}
               target="_blank"

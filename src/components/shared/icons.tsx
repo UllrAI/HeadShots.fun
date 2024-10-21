@@ -48,12 +48,18 @@ import {
   Cpu,
   Smile,
   Shield,
+  Palette,
+  Sparkles,
+  Languages,
 } from "lucide-react";
 
 export type Icon = LucideIcon;
 
 export const Icons = {
+  languages: Languages,
   zap: Zap,
+  palette: Palette,
+  sparkles: Sparkles,
   share2: Share2,
   sliders: Sliders,
   cpu: Cpu,

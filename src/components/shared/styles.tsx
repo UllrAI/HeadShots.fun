@@ -6,6 +6,14 @@ export const categories = [
 
 export const styles = [
     {
+        name: "Pro 1 (Dark Bg)",
+        img: "pro1-darkbg.jpeg",
+        prompt: "business headshot of {prompt}, dark background, in a suit, portrait photo,dark background, Half-body digital photo , realistic, highly detailed, photorealistic, 8k, looking towards the camera",
+        negative_prompt: "flaws in the eyes, flaws in the face, flaws, lowres, non-HDRi, low quality, worst quality,artifacts noise, text, watermark, glitch, deformed, mutated, ugly, disfigured, hands, low resolution, partially rendered objects,  deformed or partially rendered eyes, deformed, deformed eyeballs, cross-eyed,blurry,border, picture frame",
+        category: "studio",
+        hot: true
+    },
+    {
         name: "Comics",
         img: "comics.jpeg",
         prompt: "color comic of {prompt}, graphic illustration, comic art, headshot, graphic novel art, vibrant, highly detailed",
@@ -28,6 +36,13 @@ export const styles = [
         isNew: true
     },
     {
+        name: "ID Photo",
+        img: "id-photo.jpeg",
+        prompt: "ID Photo of {prompt}, professional, clean background, headshot portrait photo, white background, Half-body digital photo , realistic, highly detailed, photorealistic, 8k, looking towards the camera",
+        negative_prompt: "",
+        category: "studio"
+    },
+    {
         name: "Impressionism",
         img: "impressionism.jpeg",
         prompt: "Portrait, impressionist painting of {prompt}, loose brushwork, vibrant color, light and shadow play, headshot, artistic",
@@ -41,6 +56,14 @@ export const styles = [
         prompt: "claymotion, made-of-clay, stopmotion, polymer clay, ultra light clay, {prompt}, High quality, details, cartoonish, 8k",
         negative_prompt: "",
         category: "creative",
+    },
+    {
+        name: "Pro 2 (Light Bg)",
+        img: "pro2-lightbg.jpeg",
+        prompt: "business headshot of {prompt}, White background, in a suit, portrait photo,White background , Half-body digital photo , realistic, highly detailed, photorealistic, 8k, looking towards the camera",
+        negative_prompt: "",
+        category: "studio",
+        isNew: true
     },
     {
         name: "Astronaut",
@@ -64,6 +87,13 @@ export const styles = [
         negative_prompt: "ugly, deformed, noisy, blurry, low contrast, grunge, sloppy, unkempt, photograph, photo, realistic, border, picture frame, text, watermark",
         category: "creative",
         isNew: true
+    },
+    {
+        name: "Cafe",
+        img: "cafe.jpeg",
+        prompt: "headshot of {prompt}, leisure Informal clothing, in cafe background, cafe background, Half-body digital photo , realistic, highly detailed, photorealistic, 8k, looking towards the camera",
+        negative_prompt: "",
+        category: "studio",
     },
     {
         name: "Viking",
@@ -191,33 +221,10 @@ export const styles = [
         negative_prompt: "",
         category: "creative"
     },
-
-    {
-        name: "Pro 1 (Dark Bg)",
-        img: "pro1-darkbg.jpeg",
-        prompt: "business headshot of {prompt}, dark background, in a suit, portrait photo,dark background, Half-body digital photo , realistic, highly detailed, photorealistic, 8k, looking towards the camera",
-        negative_prompt: "flaws in the eyes, flaws in the face, flaws, lowres, non-HDRi, low quality, worst quality,artifacts noise, text, watermark, glitch, deformed, mutated, ugly, disfigured, hands, low resolution, partially rendered objects,  deformed or partially rendered eyes, deformed, deformed eyeballs, cross-eyed,blurry,border, picture frame",
-        category: "studio"
-    },
-    {
-        name: "Pro 2 (Light Bg)",
-        img: "pro2-lightbg.jpeg",
-        prompt: "business headshot of {prompt}, White background, in a suit, portrait photo,White background , Half-body digital photo , realistic, highly detailed, photorealistic, 8k, looking towards the camera",
-        negative_prompt: "",
-        category: "studio",
-        isNew: true
-    },
     {
         name: "Office",
         img: "office.jpeg",
         prompt: "business headshot of {prompt}, in the office, office background, in a suit, portrait photo,IT office, Half-body digital photo , realistic, highly detailed, photorealistic, 8k, looking towards the camera ",
-        negative_prompt: "",
-        category: "studio"
-    },
-    {
-        name: "ID Photo",
-        img: "id-photo.jpeg",
-        prompt: "ID Photo of {prompt}, professional, clean background, headshot portrait photo, white background, Half-body digital photo , realistic, highly detailed, photorealistic, 8k, looking towards the camera",
         negative_prompt: "",
         category: "studio"
     },
@@ -235,13 +242,6 @@ export const styles = [
         prompt: "headshot of {prompt} as Real Estate Agent, outdoor house background, in a suit, house background, Half-body digital photo , realistic, highly detailed, photorealistic, 8k, looking towards the camera",
         negative_prompt: "",
         category: "studio"
-    },
-    {
-        name: "Cafe",
-        img: "cafe.jpeg",
-        prompt: "headshot of {prompt}, leisure Informal clothing, in cafe background, cafe background, Half-body digital photo , realistic, highly detailed, photorealistic, 8k, looking towards the camera",
-        negative_prompt: "",
-        category: "studio",
     },
     {
         name: "Bookshelf",

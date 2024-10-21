@@ -7,6 +7,7 @@ import { DashboardHeader } from "@/components/dashboard/header";
 import { UserNameForm } from "@/components/forms/user-name-form";
 import { UserAvatarForm } from "@/components/forms/user-avatar-form";
 import { siteConfig } from "@/config/site";
+import { getTranslations } from "next-intl/server";
 
 export const metadata = constructMetadata({
   title: `Settings – ${siteConfig.title}`,
@@ -15,14 +16,14 @@ export const metadata = constructMetadata({
 
 export default async function SettingsPage() {
   const user = await getCurrentUser();
-
+  const t = await getTranslations("Settings");
   if (!user?.id) redirect("/login");
 
   return (
     <>
       <DashboardHeader
-        heading="Settings"
-        text="Manage account settings."
+        heading={t("settings")}
+        text={t("manage_account_settings")}
       />
       <div className="divide-y divide-muted pb-10">
         <UserNameForm user={{ id: user.id, name: user.name || "" }} />

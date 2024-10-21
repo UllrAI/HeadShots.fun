@@ -9,12 +9,13 @@ import { Drawer } from "vaul";
 import MaxWidthWrapper from "@/components/shared/max-width-wrapper";
 import { BLOG_CATEGORIES } from "@/config/blog";
 import { cn } from "@/lib/utils";
+import { useTranslations } from "next-intl";
 
-export function BlogHeaderLayout() {
+export function BlogHeaderLayout({ locale }: { locale: string }) {
   const [open, setOpen] = useState(false);
   const { slug } = useParams() as { slug?: string };
   const data = BLOG_CATEGORIES.find((category) => category.slug === slug);
-
+  const t = useTranslations('BlogPage');
   const closeDrawer = () => {
     setOpen(false);
   };
@@ -24,11 +25,10 @@ export function BlogHeaderLayout() {
       <MaxWidthWrapper className="py-6 md:pb-8 md:pt-10">
         <div className="max-w-screen-sm">
           <h1 className="font-heading text-3xl md:text-4xl">
-            {data?.title || "Blog"}
+            {t('blog')}
           </h1>
           <p className="mt-3.5 text-base text-muted-foreground md:text-lg">
-            {data?.description ||
-              "Latest news and updates from HeadShots.fun"}
+            {t('description')}
           </p>
         </div>
 
@@ -37,11 +37,11 @@ export function BlogHeaderLayout() {
             role="list"
             className="flex w-full flex-1 gap-x-2 border-b text-[15px] text-muted-foreground"
           >
-            <CategoryLink title="All" href="/blog" active={!slug} />
+            <CategoryLink title={t('all')} href="/blog" active={!slug} />
             {BLOG_CATEGORIES.map((category) => (
               <CategoryLink
                 key={category.slug}
-                title={category.title}
+                title={t(category.slug)}
                 href={`/blog/category/${category.slug}`}
                 active={category.slug === slug}
               />
@@ -56,7 +56,7 @@ export function BlogHeaderLayout() {
           className="mb-8 flex w-full items-center border-y p-3 text-foreground/90 md:hidden"
         >
           <List className="size-[18px]" />
-          <p className="ml-2.5 text-sm font-medium">Categories</p>
+          <p className="ml-2.5 text-sm font-medium">{t('categories')}</p>
         </Drawer.Trigger>
         <Drawer.Overlay className="fixed inset-0 z-40 bg-background/80 backdrop-blur-sm" onClick={closeDrawer} />
         <Drawer.Portal>
@@ -66,7 +66,7 @@ export function BlogHeaderLayout() {
             </div>
             <ul role="list" className="mb-14 w-full p-3 text-muted-foreground">
               <CategoryLink
-                title="All"
+                title={t('all')}
                 href="/blog"
                 active={!slug}
                 clickAction={closeDrawer}
@@ -75,7 +75,7 @@ export function BlogHeaderLayout() {
               {BLOG_CATEGORIES.map((category) => (
                 <CategoryLink
                   key={category.slug}
-                  title={category.title}
+                  title={t(category.slug)}
                   href={`/blog/category/${category.slug}`}
                   active={category.slug === slug}
                   clickAction={closeDrawer}

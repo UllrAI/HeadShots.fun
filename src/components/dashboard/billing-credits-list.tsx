@@ -8,8 +8,10 @@ import { Pagination, PaginationContent, PaginationNext, PaginationPrevious } fro
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { CreditsDisplay } from "@/components/layout/credits";
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer } from 'recharts';
+import { useTranslations } from "next-intl";
 
 export function CreditTransactionHistory() {
+  const t = useTranslations("Credits");
   const [transactions, setTransactions] = useState<CreditTransaction[]>([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
@@ -65,7 +67,7 @@ export function CreditTransactionHistory() {
       <Card className="mb-4">
         <CardHeader>
           <CardTitle className="flex items-center justify-between">
-            <span className="text-md font-semibold">Credits Activity</span>
+            <span className="text-md font-semibold">{t("credits_activity")}</span>
             <CreditsDisplay showCredits={true} />
           </CardTitle>
         </CardHeader>
@@ -102,22 +104,22 @@ export function CreditTransactionHistory() {
         </CardContent>
         <CardFooter className="flex-col gap-2 text-pretty text-center text-sm">
           <div className="leading-none text-muted-foreground">
-            30-day credit activity summary
+            {t("30_day_credit_activity_summary")}
           </div>
         </CardFooter>
       </Card>
       
       <Card>
         <CardHeader>
-          <CardTitle>Credits History</CardTitle>
+          <CardTitle>{t("credits_history")}</CardTitle>
         </CardHeader>
         <CardContent>
           <Table>
             <TableHeader>
               <TableRow>
-                <TableHead>Date</TableHead>
-                <TableHead>Type</TableHead>
-                <TableHead>Amount</TableHead>
+                <TableHead>{t("date")}</TableHead>
+                <TableHead>{t("type")}</TableHead>
+                <TableHead>{t("amount")}</TableHead>
               </TableRow>
             </TableHeader>
             <TableBody>
@@ -145,12 +147,12 @@ export function CreditTransactionHistory() {
           <div className="mt-4 flex items-center justify-between">
             <Select onValueChange={handlePageSizeChange} value={pageSize.toString()}>
               <SelectTrigger className="w-48">
-                <SelectValue placeholder="Select page size" />
+                <SelectValue placeholder={t("select_page_size")} />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="10">10 per page</SelectItem>
-                <SelectItem value="20">20 per page</SelectItem>
-                <SelectItem value="50">50 per page</SelectItem>
+                <SelectItem value="10">{t("10_per_page")}</SelectItem>
+                <SelectItem value="20">{t("20_per_page")}</SelectItem>
+                <SelectItem value="50">{t("50_per_page")}</SelectItem>
               </SelectContent>
             </Select>
             {total > pageSize && (

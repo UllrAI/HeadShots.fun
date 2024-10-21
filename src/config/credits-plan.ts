@@ -1,26 +1,27 @@
 export const pricingData = [
   {
-    price: 9.99,
-    description: "Casual Charmer: Spice up your social media game",
-    features: ["40 Credits"],
-    quantity: 40,
+    id: 1,
+    price: 10,
+    quantity: 10,
   },
   {
-    price: 19.99,
-    description: "Portrait Pro: Elevate your online presence",
-    features: ["100 Credits"],
+    id: 2,
+    price: 20,
+    quantity: 20,
+  },
+  {
+    id: 3,
+    price: 50,
+    quantity: 50,
+  },
+  {
+    id: 4,
+    price: 100,
     quantity: 100,
   },
   {
-    price: 29.99,
-    description: "Team Transformer: Make your whole squad shine",
-    features: ["200 Credits"],
+    id: 5,
+    price: 200,
     quantity: 200,
-  },
-  {
-    price: 39.99,
-    description: "Team Transformer: Make your whole squad shine",
-    features: ["400 Credits"],
-    quantity: 400,
-  },
+  }
 ];

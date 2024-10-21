@@ -1,10 +1,11 @@
 import Image from "next/image";
-
+import { useTranslations } from "next-intl";
 import MaxWidthWrapper from "@/components/shared/max-width-wrapper";
 
 export default function BentoGrid() {
+  const t = useTranslations("BentoGrid");
   return (
-    <section className="py-32">
+    <section className="py-24">
       <MaxWidthWrapper>
         <div className="relative z-10 grid grid-cols-6 gap-3">
           {/* First card */}
@@ -27,7 +28,7 @@ export default function BentoGrid() {
                 </span>
               </div>
               <h2 className="mt-6 text-center font-heading text-2xl md:text-3xl lg:text-4xl">
-                Customizable Prompts
+                {t("customizable_prompts")}
               </h2>
             </div>
           </div>
@@ -90,10 +91,10 @@ export default function BentoGrid() {
               </div>
               <div className="relative z-10 mt-8 space-y-1.5 text-center">
                 <h2 className="text-lg font-medium text-foreground">
-                  Secure by Design
+                  {t("secure_by_design")}
                 </h2>
                 <p className="text-muted-foreground">
-                  Your data is protected with top-notch security, giving you peace of mind.
+                  {t("secure_by_design_description")}
                 </p>
               </div>
             </div>
@@ -104,7 +105,7 @@ export default function BentoGrid() {
             <div>
               <div>
                 <span className="text-gradient_indigo-purple mx-auto block w-fit font-heading text-xl">
-                  Usually in 10 seconds
+                  {t("usually_in_10_seconds")}
                 </span>
                 <svg
                   className="h-26 w-full"
@@ -158,10 +159,10 @@ export default function BentoGrid() {
               </div>
               <div className="relative z-10 mt-8 space-y-1.5 text-center">
                 <h2 className="text-lg font-medium text-foreground">
-                  Lightning-Fast Results
+                  {t("lightning_fast_results")}
                 </h2>
                 <p className="text-muted-foreground">
-                  Get AI-generated headshots in 10 seconds.
+                  {t("lightning_fast_results_description")}
                 </p>
               </div>
             </div>
@@ -189,10 +190,10 @@ export default function BentoGrid() {
                 </div>
                 <div className="space-y-2">
                   <h2 className="text-lg font-medium text-foreground">
-                    Professional Quality
+                    {t("professional_quality")}
                   </h2>
                   <p className="text-muted-foreground">
-                    AI-generated headshots.fun that rival professional photography, perfect for any occasion and purpose.
+                    {t("professional_quality_description")}
                   </p>
                 </div>
               </div>
@@ -273,10 +274,10 @@ export default function BentoGrid() {
                 </div>
                 <div className="space-y-2">
                   <h2 className="text-lg font-medium text-foreground">
-                    Effortlessly Fun
+                    {t("effortlessly_fun")}
                   </h2>
                   <p className="text-muted-foreground">
-                    Enjoy a seamless and enjoyable process, from capturing to receiving your headshots. It’s as fun as it is professional.
+                    {t("effortlessly_fun_description")}
                   </p>
                 </div>
               </div>
@@ -284,7 +285,7 @@ export default function BentoGrid() {
                 <div className="relative flex h-full flex-col justify-center space-y-6 py-6">
                   <div className="relative flex w-[calc(50%+0.875rem)] items-center justify-end gap-2">
                     <span className="block h-fit rounded-md border bg-muted/50 px-2 py-1 text-xs">
-                      Superhero
+                      {t("superhero")}
                     </span>
                     <div className="size-7 ring-4 ring-background">
                       <Image
@@ -307,12 +308,12 @@ export default function BentoGrid() {
                       />
                     </div>
                     <span className="block h-fit rounded-md border bg-muted/50 px-2 py-1 text-xs">
-                      Witch
+                      {t("witch")}
                     </span>
                   </div>
                   <div className="relative flex w-[calc(50%+0.875rem)] items-center justify-end gap-2">
                     <span className="block h-fit rounded-md border bg-muted/50 px-2 py-1 text-xs">
-                      Clay
+                      {t("clay")}
                     </span>
                     <div className="size-7 ring-4 ring-background">
                       <Image

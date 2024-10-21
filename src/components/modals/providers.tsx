@@ -10,7 +10,13 @@ export const ModalContext = createContext<{
   setShowSignInModal: () => {},
 });
 
-export default function ModalProvider({ children }: { children: ReactNode }) {
+export default function ModalProvider({
+  children,
+  locale,
+}: {
+  children: ReactNode;
+  locale: string;
+}) {
   const { SignInModal, setShowSignInModal } = useSignInModal();
 
   return (

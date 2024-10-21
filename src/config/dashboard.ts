@@ -4,65 +4,59 @@ import { SidebarNavItem } from "@/types";
 
 export const sidebarLinks: SidebarNavItem[] = [
   {
-    title: "MENU",
+    title: "menu",
     items: [
-      { href: "/dashboard", icon: "dashboard", title: "Dashboard" },
-      { href: "/dashboard/billing", icon: "billing", title: "Billing" },
-      // {
-      //   href: "/dashboard/charts",
-      //   icon: "lineChart",
-      //   title: "Charts",
-      //   disabled: true,
-      // },
+      { href: "/dashboard", icon: "dashboard", title: "dashboard" },
+      { href: "/dashboard/billing", icon: "billing", title: "billing" },
     ],
   },
   {
-    title: "OPTIONS",
+    title: "options",
     items: [
-      { href: "/dashboard/settings", icon: "settings", title: "Settings" },
-      { href: "/", icon: "home", title: "Homepage" },
+      { href: "/dashboard/settings", icon: "settings", title: "settings" },
+      { href: "/", icon: "home", title: "homepage" },
       {
         href: "mailto:support@headshots.fun",
         icon: "mail",
-        title: "Mail Support",
+        title: "mail_support",
         target: "_blank",
         authorizeOnly: UserRole.USER,
       },
     ],
   },
   {
-    title: "ADMIN",
+    title: "admin",
     authorizeOnly: UserRole.ADMIN,
     items: [
       {
-        authorizeOnly: UserRole.ADMIN,
         href: "/admin",
         icon: "laptop",
-        title: "Admin Panel",
+        title: "admin_panel",
+        authorizeOnly: UserRole.ADMIN,
       },
       {
-        authorizeOnly: UserRole.ADMIN,
         href: "/admin/users",
         icon: "user",
-        title: "Users",
+        title: "users",
+        authorizeOnly: UserRole.ADMIN,
       },
       {
-        authorizeOnly: UserRole.ADMIN,
         href: "/admin/studios",
         icon: "sliders",
-        title: "Studios",
+        title: "studios",
+        authorizeOnly: UserRole.ADMIN,
       },
       {
-        authorizeOnly: UserRole.ADMIN,
         href: "/admin/predictions",
         icon: "image",
-        title: "Predictions",
+        title: "predictions",
+        authorizeOnly: UserRole.ADMIN,
       },
       {
-        authorizeOnly: UserRole.ADMIN,
         href: "/admin/orders",
         icon: "package",
-        title: "Orders",
+        title: "orders",
+        authorizeOnly: UserRole.ADMIN,
       },
     ],
   },

@@ -4,12 +4,12 @@ export const BLOG_CATEGORIES: {
   description: string;
 }[] = [
   {
-    title: "News",
+    title: "news",
     slug: "news",
     description: "Updates and announcements from HeadShots.fun",
   },
   {
-    title: "Education",
+    title: "education",
     slug: "education",
     description: "Educational content about HeadShots.fun",
   },

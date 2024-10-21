@@ -6,37 +6,32 @@ import { PricingFaq } from "@/components/pricing/pricing-faq";
 import { pricingData } from "@/config/credits-plan";
 import { ComparisonTable } from "@/components/pricing/comparison-table";
 import MaxWidthWrapper from "@/components/shared/max-width-wrapper";
-import { HeaderSection } from "@/components/shared/header-section";
+import { getTranslations } from 'next-intl/server';
+import { unstable_setRequestLocale } from "next-intl/server";
 
-export const metadata = constructMetadata({
-  title: `Pricing – ${siteConfig.title}`,
-  description: "Explore our headshot pricing.",
-});
+export async function generateMetadata({ params: { locale } }: { params: { locale: string } }) {
+  unstable_setRequestLocale(locale);
+  const t = await getTranslations('PricingPage');
 
-export default async function PricingPage() {
+  return constructMetadata({
+    title: t('metadata.title', { siteTitle: siteConfig.title }),
+    description: t('metadata.description'),
+  });
+}
+
+export default async function PricingPage({ params: { locale } }: { params: { locale: string } }) {
+  unstable_setRequestLocale(locale);
   const user = await getCurrentUser();
 
   return (
     <div className="flex w-full flex-col gap-16 py-8 md:py-8">
       <MaxWidthWrapper>
         <section className="flex flex-col items-center">
-          <div className="mx-auto mb-12 flex w-full flex-col items-center gap-5">
-            <HeaderSection
-              label="Pricing"
-              title="Simple, Transparent Pricing"
-              subtitle="Choose the perfect plan for your needs. No hidden fees, no surprises."
-            />
-          </div>
           <PricingCards userId={user?.id} emailAddress={user?.email ?? undefined} pricingData={pricingData} />
-          <div className="my-12 text-center">
-            <p className="text-sm text-muted-foreground">
-              Enjoy a 7-day risk-free trial on all plans. Full refund if no credits used.
-            </p>
-          </div>
-          <ComparisonTable pricingData={pricingData} />
+          <ComparisonTable pricingData={pricingData} locale={locale} />
           <hr className="container" />
           <div className="mt-16 flex w-full flex-col items-center gap-2">
-            <PricingFaq />
+            <PricingFaq locale={locale} />
           </div>
         </section>
       </MaxWidthWrapper>

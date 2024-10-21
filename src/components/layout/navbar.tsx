@@ -14,6 +14,8 @@ import { Skeleton } from "@/components/ui/skeleton";
 import { ModalContext } from "@/components/modals/providers";
 import { Icons } from "@/components/shared/icons";
 import MaxWidthWrapper from "@/components/shared/max-width-wrapper";
+import LocaleSwitcher from "@/components/locale/locale-switcher";
+import { useTranslations } from "next-intl";
 
 interface NavBarProps {
   scroll?: boolean;
@@ -21,6 +23,7 @@ interface NavBarProps {
 }
 
 export function NavBar({ scroll = false }: NavBarProps) {
+  const t = useTranslations("NavBar");
   const scrolled = useScroll(50);
   const { data: session, status } = useSession();
   const { setShowSignInModal } = useContext(ModalContext);
@@ -32,7 +35,7 @@ export function NavBar({ scroll = false }: NavBarProps) {
   return (
     <header
       className={`sticky top-0 z-40 flex w-full justify-center bg-background/60 backdrop-blur-xl transition-all ${
-        scroll ? (scrolled ? "border-b" : "bg-transparent") : "border-b"
+        scroll ? (scrolled ? "border-b-0" : "bg-transparent") : "border-b"
       }`}
     >
       <MaxWidthWrapper
@@ -61,7 +64,7 @@ export function NavBar({ scroll = false }: NavBarProps) {
                     item.disabled && "cursor-not-allowed opacity-80",
                   )}
                 >
-                  {item.title}
+                  {t(item.title)}
                 </Link>
               ))}
             </nav>
@@ -69,6 +72,7 @@ export function NavBar({ scroll = false }: NavBarProps) {
         </div>
 
         <div className="flex items-center space-x-3">
+          <div className="hidden md:block"><LocaleSwitcher/></div>
 
           {session ? (
             <Link
@@ -81,7 +85,7 @@ export function NavBar({ scroll = false }: NavBarProps) {
                 size="sm"
                 rounded="full"
               >
-                <span>Dashboard</span>
+                <span>{t("dashboard")}</span>
               </Button>
             </Link>
           ) : status === "unauthenticated" ? (
@@ -92,7 +96,7 @@ export function NavBar({ scroll = false }: NavBarProps) {
               rounded="full"
               onClick={() => setShowSignInModal(true)}
             >
-              <span>Sign In</span>
+              <span>{t("sign_in")}</span>
               <Icons.arrowRight className="size-4" />
             </Button>
           ) : (

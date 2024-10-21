@@ -1,5 +1,4 @@
 import { Post } from "contentlayer/generated";
-
 import { BlogCard } from "@/components/content/blog-card";
 
 export function BlogPosts({

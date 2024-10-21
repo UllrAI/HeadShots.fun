@@ -14,6 +14,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { toast } from "sonner";
 import { Icons } from "@/components/shared/icons";
+import { useTranslations } from "next-intl";
 
 interface UserAuthFormProps extends React.HTMLAttributes<HTMLDivElement> {
   type?: string;
@@ -22,6 +23,7 @@ interface UserAuthFormProps extends React.HTMLAttributes<HTMLDivElement> {
 type FormData = z.infer<typeof userAuthSchema>;
 
 export function UserAuthForm({ className, type, ...props }: UserAuthFormProps) {
+  const t = useTranslations('auth');
   const {
     register,
     handleSubmit,
@@ -62,7 +64,7 @@ export function UserAuthForm({ className, type, ...props }: UserAuthFormProps) {
         <div className="grid gap-2">
           <div className="grid gap-1">
             <Label className="sr-only" htmlFor="email">
-              Email
+              {t('email')}
             </Label>
             <Input
               id="email"
@@ -84,7 +86,7 @@ export function UserAuthForm({ className, type, ...props }: UserAuthFormProps) {
             {isLoading && (
               <Icons.spinner className="mr-2 size-4 animate-spin" />
             )}
-            {type === "register" ? "Sign Up with Email" : "Sign In with Email"}
+            {type === "register" ? t('sign_up_with_email') : t('sign_in_with_email')}
           </button>
         </div>
       </form>
@@ -94,7 +96,7 @@ export function UserAuthForm({ className, type, ...props }: UserAuthFormProps) {
         </div>
         <div className="relative flex justify-center text-xs uppercase">
           <span className="bg-background px-2 text-muted-foreground">
-            Or
+            {t('or')}
           </span>
         </div>
       </div>
@@ -112,7 +114,7 @@ export function UserAuthForm({ className, type, ...props }: UserAuthFormProps) {
         ) : (
           <Icons.google className="mr-2 size-4" />
         )}{" "}
-        Continue with Google
+        {t('continue_with_google')}
       </button>
       <button
         type="button"
@@ -128,7 +130,7 @@ export function UserAuthForm({ className, type, ...props }: UserAuthFormProps) {
         ) : (
           <Icons.linkedin className="mr-2 size-4" />
         )}{" "}
-        Continue with LinkedIn
+        {t('continue_with_linkedin')}
       </button>
     </div>
   );

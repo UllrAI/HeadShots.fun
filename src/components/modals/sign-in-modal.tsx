@@ -11,6 +11,7 @@ import { Icons } from "@/components/shared/icons";
 import { Button } from "@/components/ui/button";
 import { Modal } from "@/components/ui/modal";
 import { siteConfig } from "@/config/site";
+import { useTranslations } from "next-intl";
 
 function SignInModal({
   showSignInModal,
@@ -21,6 +22,7 @@ function SignInModal({
 }) {
   const [signInClicked, setSignInClicked] = useState(false);
   const [signInProvider, setSignInProvider] = useState<string | null>(null);
+  const t = useTranslations('auth');
 
   return (
     <Modal showModal={showSignInModal} setShowModal={setShowSignInModal}>
@@ -29,16 +31,15 @@ function SignInModal({
           <a href={siteConfig.url}>
             <Icons.logo className="size-10" />
           </a>
-          <h3 className="font-urban text-2xl font-bold">Sign In</h3>
+          <h3 className="font-urban text-2xl font-bold">{t('sign_in')}</h3>
           <p className="text-sm text-gray-500">
-            You can{" "}
+            {t('email_login_text')} {" "}
             <a href="/login" className="text-primary underline">
-              Login
+              {t('login')}
             </a>{" "}
             or <a href="/register" className="text-primary underline">
-              Register
-            </a>{" "}
-            using your email.
+              {t('register')}
+            </a>
           </p>
         </div>
 
@@ -61,7 +62,7 @@ function SignInModal({
             ) : (
               <Icons.google className="mr-2 size-4" />
             )}{" "}
-            Sign In with Google
+            {t('sign_in_with_google')}
           </Button>
           <Button
             variant="default"
@@ -81,7 +82,7 @@ function SignInModal({
             ) : (
               <Icons.linkedin className="mr-2 size-4" />
             )}{" "}
-            Sign In with LinkedIn
+            {t('sign_in_with_linkedin')}
           </Button>
         </div>
       </div>

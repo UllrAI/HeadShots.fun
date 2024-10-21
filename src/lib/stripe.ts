@@ -22,7 +22,7 @@ export async function createCheckoutSession(
         price_data: {
           currency: 'usd',
           product_data: {
-            name: `${quantity} Credits of HeadShots.fun`,
+            name: `${quantity} Credits - HeadShots.fun`,
             description: description,
           },
           unit_amount: Math.round(amount * 100), // 确保金额是整数

@@ -7,7 +7,7 @@ import { User } from "@prisma/client";
 import { useSession } from "next-auth/react";
 import { useForm } from "react-hook-form";
 import { toast } from "sonner";
-
+import { useTranslations } from "next-intl";
 import { userAvatarSchema } from "@/lib/validations/user";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -21,6 +21,7 @@ interface UserAvatarFormProps {
 }
 
 export function UserAvatarForm({ user }: UserAvatarFormProps) {
+  const t = useTranslations("Settings");
   const { update } = useSession();
   const [updated, setUpdated] = useState(false);
   const [isPending, startTransition] = useTransition();
@@ -49,13 +50,13 @@ export function UserAvatarForm({ user }: UserAvatarFormProps) {
       const { status } = await updateUserAvatarWithId(data);
 
       if (status !== "success") {
-        toast.error("Something went wrong.", {
-          description: "Your avatar was not updated. Please try again.",
+        toast.error(t("settings.something_went_wrong"), {
+          description: t("settings.your_avatar_was_not_updated_please_try_again"),
         });
       } else {
         await update();
         setUpdated(false);
-        toast.success("Your avatar has been updated.");
+        toast.success(t("settings.your_avatar_has_been_updated"));
       }
     });
   });
@@ -63,15 +64,15 @@ export function UserAvatarForm({ user }: UserAvatarFormProps) {
   return (
     <form onSubmit={onSubmit}>
       <SectionColumns
-        title="Your Avatar"
-        description="Please enter a display avatar you are comfortable with."
+        title={t("your_avatar")}
+        description={t("please_enter_a_display_avatar_you_are_comfortable_with")}
       >
         <div className="flex w-full items-center gap-2">
           <Avatar className="size-10 bg-gray-50">
             <AvatarImage alt="Avatar preview" src={avatarPreview} />
           </Avatar>
           <Label className="sr-only" htmlFor="name">
-            Avatar
+            {t("your_avatar")}
           </Label>
           <Input
             id="image"
@@ -90,8 +91,7 @@ export function UserAvatarForm({ user }: UserAvatarFormProps) {
               <Icons.spinner className="size-4 animate-spin" />
             ) : (
               <p>
-                Save
-                <span className="hidden sm:inline-flex">&nbsp;Changes</span>
+                {t("save")}
               </p>
             )}
           </Button>
@@ -102,7 +102,9 @@ export function UserAvatarForm({ user }: UserAvatarFormProps) {
               {errors.image.message}
             </p>
           )}
-          <p className="text-[13px] text-muted-foreground">Max 255 characters</p>
+          <p className="text-[13px] text-muted-foreground">
+            {t("max_255_characters")}
+          </p>
         </div>
       </SectionColumns>
     </form>
