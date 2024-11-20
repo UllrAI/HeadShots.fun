@@ -1,13 +1,13 @@
 import Stripe from "stripe"
 import { env } from "@/env.mjs"
-import { prisma } from "@/lib/db"  // 修改这一行
+import { prisma } from "@/lib/db"
 
 export const stripe = new Stripe(env.STRIPE_SECRET_KEY, {
   apiVersion: "2024-04-10",
   typescript: true,
 })
 
-// 添加一些常用的Stripe相关函数
+// commonly used Stripe related functions
 export async function createCheckoutSession(
   amount: number,
   quantity: number,
@@ -25,7 +25,7 @@ export async function createCheckoutSession(
             name: `${quantity} Credits - HeadShots.fun`,
             description: description,
           },
-          unit_amount: Math.round(amount * 100), // 确保金额是整数
+          unit_amount: Math.round(amount * 100), // ensure amount is an integer
         },
         quantity: 1,
       },
@@ -37,14 +37,15 @@ export async function createCheckoutSession(
       userId,
       credits: quantity.toString(),
     },
-    customer_email: emailAddress, // 添加这一行来预填充客户的电子邮件地址
+    customer_email: emailAddress, // add this line to pre-fill the customer's email address
+    allow_promotion_codes: true, // add this line to enable coupon functionality
   });
 
-  return session; // 返回完整的 session 对象
+  return session; // return the complete session object
 }
 
-export async function handleStripeWebhook(/* 参数 */) {
-  // 实现处理Stripe webhook的逻辑
+export async function handleStripeWebhook(/* parameters */) {
+  // implement the logic to handle Stripe webhooks
 }
 
 export async function handleSuccessfulPayment(sessionId: string) {
@@ -97,5 +98,3 @@ export async function handleSuccessfulPayment(sessionId: string) {
 
   return updatedTransaction;
 }
-
-// ... 其他可能需要的Stripe相关函数
