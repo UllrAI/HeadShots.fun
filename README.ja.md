@@ -11,7 +11,7 @@
 ### 🎉 朗報：HeadShots.funがオープンソースになりました！
 
 [![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
-[![Discord](https://img.shields.io/discord/1234567890?color=7289da&label=Discord&logo=discord&logoColor=ffffff)](https://discord.gg/vdqwAcp7mf)
+[![Discord](https://img.shields.io/discord/1261197667053207608?color=7289da&label=Discord&logo=discord&logoColor=ffffff)](https://discord.gg/vdqwAcp7mf)
 [![Twitter Follow](https://img.shields.io/twitter/follow/ullr_ai?style=social)](https://twitter.com/ullr_ai)
 
 </div>
