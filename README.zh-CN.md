@@ -1,11 +1,22 @@
-# HeadShots.fun
+# 📸 HeadShots.fun
 
-![HeadShots.fun](https://s.ogimage.site/user-cases/headshots-fun.jpg)
-*OG 图片由 [OG:image.site](https://ogimage.site/?from=headshots-fun-github) 生成*
+<div align="center">
 
-📚 [English](README.md) | [简体中文](README.zh-CN.md) | [日本語](README.ja.md) | [한국어](README.ko.md) | [Español](README.es.md) | [Français](README.fr.md)
+🌍 [English](README.md) · [简体中文](README.zh-CN.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · [Español](README.es.md) · [Français](README.fr.md)
 
-🎉 **激动人心的消息：HeadShots.fun 现已开源！**
+<img src="https://s.ogimage.site/user-cases/headshots-fun.jpg" alt="HeadShots.fun" width="600" />
+
+<sup>由 [OG:image.site](https://ogimage.site/?from=headshots-fun-github) 生成</sup>
+
+### 🎉 激动人心的消息：HeadShots.fun 现已开源！
+
+[![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
+[![Discord](https://img.shields.io/discord/1234567890?color=7289da&label=Discord&logo=discord&logoColor=ffffff)](https://discord.gg/vdqwAcp7mf)
+[![Twitter Follow](https://img.shields.io/twitter/follow/ullr_ai?style=social)](https://twitter.com/ullr_ai)
+
+</div>
+
+---
 
 ## 关于
 

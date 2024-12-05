@@ -1,11 +1,22 @@
-# HeadShots.fun
+# 📸 HeadShots.fun
 
-![HeadShots.fun](https://s.ogimage.site/user-cases/headshots-fun.jpg)
-*OG 이미지는 [OG:image.site](https://ogimage.site/?from=headshots-fun-github)에서 생성됨*
+<div align="center">
 
-📚 [English](README.md) | [简体中文](README.zh-CN.md) | [日本語](README.ja.md) | [한국어](README.ko.md) | [Español](README.es.md) | [Français](README.fr.md)
+🌍 [English](README.md) · [简体中文](README.zh-CN.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · [Español](README.es.md) · [Français](README.fr.md)
 
-🎉 **흥미진진한 소식: HeadShots.fun이 오픈소스가 되었습니다!**
+<img src="https://s.ogimage.site/user-cases/headshots-fun.jpg" alt="HeadShots.fun" width="600" />
+
+<sup>[OG:image.site](https://ogimage.site/?from=headshots-fun-github)에서 생성됨</sup>
+
+### 🎉 흥미진진한 소식: HeadShots.fun이 오픈소스가 되었습니다!
+
+[![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
+[![Discord](https://img.shields.io/discord/1234567890?color=7289da&label=Discord&logo=discord&logoColor=ffffff)](https://discord.gg/vdqwAcp7mf)
+[![Twitter Follow](https://img.shields.io/twitter/follow/ullr_ai?style=social)](https://twitter.com/ullr_ai)
+
+</div>
+
+---
 
 ## 소개
 
