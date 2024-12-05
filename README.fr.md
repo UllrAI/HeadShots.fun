@@ -1,12 +1,9 @@
 # HeadShots.fun
 
-📚 **README dans d'autres langues**
-- [English](README.md)
-- [日本語](README.ja.md)
-- [中文](README.zh-CN.md)
-- [한국어](README.ko.md)
-- [Español](README.es.md)
-- [Français](README.fr.md)
+![HeadShots.fun](https://s.ogimage.site/user-cases/headshots-fun.jpg)
+*Image OG générée par [OG:image.site](https://ogimage.site/?from=headshots-fun-github)*
+
+📚 [English](README.md) | [简体中文](README.zh-CN.md) | [日本語](README.ja.md) | [한국어](README.ko.md) | [Español](README.es.md) | [Français](README.fr.md)
 
 🎉 **Nouvelle excitante : HeadShots.fun est maintenant open source !**
 

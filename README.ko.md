@@ -1,12 +1,9 @@
 # HeadShots.fun
 
-📚 **다른 언어로 된 README**
-- [English](README.md)
-- [日本語](README.ja.md)
-- [中文](README.zh-CN.md)
-- [한국어](README.ko.md)
-- [Español](README.es.md)
-- [Français](README.fr.md)
+![HeadShots.fun](https://s.ogimage.site/user-cases/headshots-fun.jpg)
+*OG 이미지는 [OG:image.site](https://ogimage.site/?from=headshots-fun-github)에서 생성됨*
+
+📚 [English](README.md) | [简体中文](README.zh-CN.md) | [日本語](README.ja.md) | [한국어](README.ko.md) | [Español](README.es.md) | [Français](README.fr.md)
 
 🎉 **흥미진진한 소식: HeadShots.fun이 오픈소스가 되었습니다!**
 
