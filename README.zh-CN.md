@@ -8,6 +8,10 @@
 
 <sup>由 [OG:image.site](https://ogimage.site/?from=headshots-fun-github) 生成</sup>
 
+<a href="https://buy.stripe.com/cN26rW5RMcv3cnu3cj">
+  <img src="https://img.shields.io/badge/请我喝咖啡-支持项目发展-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black" alt="请我喝咖啡" width="250">
+</a>
+
 ### 🎉 激动人心的消息：HeadShots.fun 现已开源！
 
 [![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)

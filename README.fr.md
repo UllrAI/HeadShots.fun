@@ -8,6 +8,10 @@
 
 <sup>Générée par [OG:image.site](https://ogimage.site/?from=headshots-fun-github)</sup>
 
+<a href="https://buy.stripe.com/cN26rW5RMcv3cnu3cj">
+  <img src="https://img.shields.io/badge/Offrez_moi_un_Café-Soutenez_le_Projet-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black" alt="Offrez-moi un Café" width="250">
+</a>
+
 ### 🎉 Nouvelle excitante : HeadShots.fun est maintenant open source !
 
 [![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)

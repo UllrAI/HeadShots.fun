@@ -8,6 +8,10 @@
 
 <sup>[OG:image.site](https://ogimage.site/?from=headshots-fun-github)에서 생성됨</sup>
 
+<a href="https://buy.stripe.com/cN26rW5RMcv3cnu3cj">
+  <img src="https://img.shields.io/badge/커피_한잔_사주기-프로젝트_지원하기-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black" alt="커피 한잔 사주기" width="250">
+</a>
+
 ### 🎉 흥미진진한 소식: HeadShots.fun이 오픈소스가 되었습니다!
 
 [![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)

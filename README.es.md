@@ -8,6 +8,11 @@
 
 <sup>Generada por [OG:image.site](https://ogimage.site/?from=headshots-fun-github)</sup>
 
+<a href="https://buy.stripe.com/cN26rW5RMcv3cnu3cj">
+  <img src="https://img.shields.io/badge/Invítame_un_Café-Apoya_el_Proyecto-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black" alt="Invítame un Café" width="250">
+</a>
+
+
 ### 🎉 ¡Emocionante noticia: HeadShots.fun ahora es de código abierto!
 
 [![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
