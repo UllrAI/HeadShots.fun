@@ -49,7 +49,7 @@ export function SiteFooter({ className }: React.HTMLAttributes<HTMLElement>) {
           <div className="text-left text-sm text-muted-foreground">
             <span className="font-medium">{t('built_by')}{" "}</span>
             <Link
-              href="https://headshots.fun"
+              href="https://headshot.cv/?from=opensource-footer"
               target="_blank"
               className="font-medium underline underline-offset-4"
             >
