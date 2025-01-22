@@ -8,7 +8,7 @@
 
 <sup>[OG:image.site](https://ogimage.site/?from=headshots-fun-github)에서 생성됨</sup>
 
-<a href="https://buy.stripe.com/cN26rW5RMcv3cnu3cj">
+<a href="https://ko-fi.com/visoar">
   <img src="https://img.shields.io/badge/커피_한잔_사주기-프로젝트_지원하기-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black" alt="커피 한잔 사주기" width="250">
 </a>
 

@@ -8,7 +8,7 @@
 
 <sup>Generada por [OG:image.site](https://ogimage.site/?from=headshots-fun-github)</sup>
 
-<a href="https://buy.stripe.com/cN26rW5RMcv3cnu3cj">
+<a href="https://ko-fi.com/visoar">
   <img src="https://img.shields.io/badge/Invítame_un_Café-Apoya_el_Proyecto-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black" alt="Invítame un Café" width="250">
 </a>
 

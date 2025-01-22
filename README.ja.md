@@ -8,7 +8,7 @@
 
 <sup>[OG:image.site](https://ogimage.site/?from=headshots-fun-github) で生成</sup>
 
-<a href="https://buy.stripe.com/cN26rW5RMcv3cnu3cj">
+<a href="https://ko-fi.com/visoar">
   <img src="https://img.shields.io/badge/コーヒーを奢る-開発を支援する-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black" alt="コーヒーを奢る" width="250">
 </a>
 
