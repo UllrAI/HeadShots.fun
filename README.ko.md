@@ -103,6 +103,10 @@ HeadShots.fun이 오픈소스가 되었음을 발표하게 되어 기쁩니다!
 - 💬 다른 개발자들과 소통하기 위해 [Discord 커뮤니티](https://discord.gg/vdqwAcp7mf) 참여하기
 - 🐦 최신 소식을 위해 [Twitter/X](https://twitter.com/ullr_ai) 팔로우하기
 
+## Showcase
+### HeadShot.cv
+Professional portraits for every career stage at [HeadShot.cv](https://headshot.cv/)
+
 ## 라이선스
 푸터의 Powered 링크를 유지해 주시기 바랍니다.
 그리고 이 프로젝트는 [AGPL 3.0](./LICENSE.md) 하에 배포됩니다.

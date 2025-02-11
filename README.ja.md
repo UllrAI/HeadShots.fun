@@ -103,6 +103,10 @@ HeadShots.funがオープンソースになったことを発表できること�
 - 💬 [Discordコミュニティ](https://discord.gg/vdqwAcp7mf)に参加して他の開発者と交流
 - 🐦 最新ニュースは[Twitter/X](https://twitter.com/ullr_ai)をフォロー
 
+## Showcase
+### HeadShot.cv
+Professional portraits for every career stage at [HeadShot.cv](https://headshot.cv/)
+
 ## ライセンス
 フッターのPoweredリンクを維持してください。
 その上で、このプロジェクトは[AGPL 3.0](./LICENSE.md)の下でリリースされています。

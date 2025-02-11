@@ -103,6 +103,10 @@ HeadShots.fun 是一个 AI 驱动的 SaaS 平台，只需 10 秒即可生成有�
 - 💬 加入我们的 [Discord 社区](https://discord.gg/vdqwAcp7mf) 与其他开发者交流
 - 🐦 在 [Twitter/X](https://twitter.com/ullr_ai) 上关注我们获取最新消息
 
+## Showcase
+### HeadShot.cv
+Professional portraits for every career stage at [HeadShot.cv](https://headshot.cv/)
+
 ## 许可证
 请确保页脚中的 Powered 链接保持不变。
 然后本项目现在基于 [AGPL 3.0](./LICENSE.md) 发布。

@@ -104,6 +104,10 @@ If you need business support, such as deployment/custom development or technical
 - 💬 Join our [Discord community](https://discord.gg/vdqwAcp7mf) to connect with other developers
 - 🐦 Follow us on [Twitter/X](https://twitter.com/ullr_ai) for the latest news
 
+## Showcase
+### HeadShot.cv
+Professional portraits for every career stage at [HeadShot.cv](https://headshot.cv/)
+
 ## License
 Please ensure that the Powered link remains in the footer.
 And Then this project is now released under the [AGPL 3.0](./LICENSE.md). 
