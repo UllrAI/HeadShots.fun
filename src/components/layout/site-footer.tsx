@@ -65,6 +65,14 @@ export function SiteFooter({ className }: React.HTMLAttributes<HTMLElement>) {
             >
               UllrAI Lab
             </Link>
+            <span className="mr-2"> . </span>
+            <Link
+              href="https://www.websitecarbon.com/website/headshots-fun/"
+              target="_blank"
+              className="font-medium underline underline-offset-4"
+            >
+              Website Carbon
+            </Link>
           </div>
 
           <div className="flex items-center gap-3">
