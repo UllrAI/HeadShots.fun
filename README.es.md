@@ -46,6 +46,7 @@ HeadShots.fun es una plataforma SaaS impulsada por IA que genera fotos de perfil
 ## Desplegar con Vercel
 
 [![Desplegar con Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FUllrAI%2FHeadShots.fun)
+[![Deploy to PandaStack](https://dashboard.pandastack.io/deploy-button.svg)](https://dashboard.pandastack.io/deploy?repo=UllrAI/HeadShots.fun&type=static&buildCmd=npm+run+build&outputDir=dist)
 
 ## Pasos de Desarrollo
 
