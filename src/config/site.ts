@@ -54,7 +54,9 @@ export const footerLinks: SidebarNavItem[] = [
     title: "Ullr AI Products",
     items: [
       { title: "PixMiller", href: "https://pixmiller.com" },
-      { title: "HeadShots fun", href: "https://headshot.cv" },
+      { title: "HeadShots fun", href: "https://headshots.fun" },
+      { title: "VibeSKU", href: "https://VibeSKU.com" },
+      { title: "AniKuku", href: "https://AniKuku.com" },
       { title: "Ullr AI Lab", href: "https://ullrai.com" },
     ],
   },
