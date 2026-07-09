@@ -105,8 +105,8 @@ If you need business support, such as deployment/custom development or technical
 - 🐦 Follow us on [Twitter/X](https://twitter.com/ullr_ai) for the latest news
 
 ## Showcase
-### HeadShot.cv
-Professional portraits for every career stage at [HeadShot.cv](https://headshot.cv/)
+### HeadShots.fun
+Professional portraits for every career stage at [HeadShots.fun](https://headshots.fun/)
 
 ## License
 Please ensure that the Powered link remains in the footer.
