@@ -4,9 +4,8 @@
 
 🌍 [English](README.md) · [简体中文](README.zh-CN.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · [Español](README.es.md) · [Français](README.fr.md)
 
-<img src="https://s.ogimage.site/user-cases/headshots-fun.jpg" alt="HeadShots.fun" width="600" />
+<img src="public/_static/og.jpg" alt="HeadShots.fun" width="600" />
 
-<sup>[OG:image.site](https://ogimage.site/?from=headshots-fun-github)에서 생성됨</sup>
 
 <a href="https://ko-fi.com/visoar">
   <img src="https://img.shields.io/badge/커피_한잔_사주기-프로젝트_지원하기-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black" alt="커피 한잔 사주기" width="250">
