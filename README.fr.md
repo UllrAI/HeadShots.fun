@@ -4,9 +4,8 @@
 
 🌍 [English](README.md) · [简体中文](README.zh-CN.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · [Español](README.es.md) · [Français](README.fr.md)
 
-<img src="https://s.ogimage.site/user-cases/headshots-fun.jpg" alt="HeadShots.fun" width="600" />
+<img src="public/_static/og.jpg" alt="HeadShots.fun" width="600" />
 
-<sup>Générée par [OG:image.site](https://ogimage.site/?from=headshots-fun-github)</sup>
 
 <a href="https://ko-fi.com/visoar">
   <img src="https://img.shields.io/badge/Offrez_moi_un_Café-Soutenez_le_Projet-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black" alt="Offrez-moi un Café" width="250">
